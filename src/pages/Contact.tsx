@@ -95,9 +95,10 @@ function Contact() {
 
   return (
     <div ref={pageRef}>
-      <div className="page-header">
+      <div className="page-header-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)' }}>
+        <div className="page-header-overlay"></div>
         <div className="container">
-          <h1>Nous Contacter</h1>
+          <h1><i className='bx bx-envelope'></i> Nous Contacter</h1>
           <p>Prenez contact avec nos équipes pour vos projets</p>
         </div>
       </div>
@@ -106,17 +107,17 @@ function Contact() {
         <div className="container">
           <div className="contact-grid">
             <div className="contact-form-container fade-in">
-              <h3>Demande de devis</h3>
+              <h3><i className='bx bx-edit'></i> Demande de devis</h3>
               
               {submitSuccess && (
                 <div className="success-message">
-                  Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+                  <i className='bx bx-check-circle'></i> Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
                 </div>
               )}
 
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <label htmlFor="name">Nom complet *</label>
+                  <label htmlFor="name"><i className='bx bx-user'></i> Nom complet *</label>
                   <input
                     type="text"
                     id="name"
@@ -130,7 +131,7 @@ function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="email">Email *</label>
+                  <label htmlFor="email"><i className='bx bx-envelope'></i> Email *</label>
                   <input
                     type="email"
                     id="email"
@@ -144,7 +145,7 @@ function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="phone">Téléphone</label>
+                  <label htmlFor="phone"><i className='bx bx-phone'></i> Téléphone</label>
                   <input
                     type="tel"
                     id="phone"
@@ -158,7 +159,7 @@ function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="productType">Type de produit</label>
+                  <label htmlFor="productType"><i className='bx bx-package'></i> Type de produit</label>
                   <select
                     id="productType"
                     name="productType"
@@ -175,7 +176,7 @@ function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="message">Message *</label>
+                  <label htmlFor="message"><i className='bx bx-message-detail'></i> Message *</label>
                   <textarea
                     id="message"
                     name="message"
@@ -194,16 +195,18 @@ function Contact() {
                   disabled={isSubmitting}
                   style={{ width: '100%' }}
                 >
-                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer la demande'}
+                  <i className='bx bx-send'></i> {isSubmitting ? 'Envoi en cours...' : 'Envoyer la demande'}
                 </button>
               </form>
             </div>
 
             <div className="contact-info-container">
               <div className="contact-info-card fade-in">
-                <h4>Coordonnées</h4>
+                <h4><i className='bx bx-id-card'></i> Coordonnées</h4>
                 <div className="contact-info-item">
-                  <span className="icon">📞</span>
+                  <span className="contact-icon">
+                    <i className='bx bx-phone'></i>
+                  </span>
                   <div>
                     <p><strong>Téléphone</strong></p>
                     <p>+229 XX XX XX XX (Cotonou)</p>
@@ -212,7 +215,9 @@ function Contact() {
                   </div>
                 </div>
                 <div className="contact-info-item">
-                  <span className="icon">✉️</span>
+                  <span className="contact-icon">
+                    <i className='bx bx-envelope'></i>
+                  </span>
                   <div>
                     <p><strong>Email</strong></p>
                     <p>contact@comatra-fm.com</p>
@@ -220,7 +225,9 @@ function Contact() {
                   </div>
                 </div>
                 <div className="contact-info-item">
-                  <span className="icon">💬</span>
+                  <span className="contact-icon">
+                    <i className='bx bxl-whatsapp'></i>
+                  </span>
                   <div>
                     <p><strong>WhatsApp</strong></p>
                     <p>+229 XX XX XX XX</p>
@@ -229,27 +236,29 @@ function Contact() {
               </div>
 
               <div className="contact-info-card fade-in">
-                <h4>Horaires d'ouverture</h4>
+                <h4><i className='bx bx-time'></i> Horaires d'ouverture</h4>
                 <ul className="hours-list">
                   <li>
-                    <span>Lundi - Vendredi</span>
+                    <span><i className='bx bx-calendar'></i> Lundi - Vendredi</span>
                     <span>7h00 - 18h00</span>
                   </li>
                   <li>
-                    <span>Samedi</span>
+                    <span><i className='bx bx-calendar'></i> Samedi</span>
                     <span>7h00 - 13h00</span>
                   </li>
                   <li>
-                    <span>Dimanche</span>
+                    <span><i className='bx bx-calendar-x'></i> Dimanche</span>
                     <span>Fermé</span>
                   </li>
                 </ul>
               </div>
 
               <div className="contact-info-card fade-in">
-                <h4>Adresse principale</h4>
+                <h4><i className='bx bx-buildings'></i> Adresse principale</h4>
                 <div className="contact-info-item">
-                  <span className="icon">📍</span>
+                  <span className="contact-icon">
+                    <i className='bx bx-map'></i>
+                  </span>
                   <div>
                     <p><strong>Siège Bénin</strong></p>
                     <p>Zone Portuaire de Cotonou</p>
