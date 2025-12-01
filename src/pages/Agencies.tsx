@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import AgencyCard from '../components/AgencyCard'
 
 const allAgencies = [
@@ -32,7 +32,31 @@ const allAgencies = [
   }
 ]
 
+const faqItems = [
+  {
+    question: 'Comment passer une commande auprès de COMATRA FISH MARINE ?',
+    answer: 'Vous pouvez passer commande en contactant directement l\'agence la plus proche de vous par téléphone ou email, ou en remplissant notre formulaire de demande de devis en ligne. Notre équipe commerciale vous recontactera dans les 24h.'
+  },
+  {
+    question: 'Quels sont vos délais de livraison ?',
+    answer: 'Nos délais de livraison varient selon votre localisation et le volume commandé. En général, nous livrons sous 24 à 48h dans les zones proches de nos agences, et sous 3 à 5 jours pour les livraisons plus éloignées.'
+  },
+  {
+    question: 'Proposez-vous des solutions pour les professionnels ?',
+    answer: 'Oui, nous travaillons principalement avec des professionnels : restaurants, hôtels, supermarchés, grossistes. Nous proposons des tarifs adaptés aux volumes et des conditions de paiement flexibles.'
+  },
+  {
+    question: 'Comment garantissez-vous la fraîcheur des produits ?',
+    answer: 'Nous disposons d\'une chaîne logistique complète avec des véhicules réfrigérés et des entrepôts frigorifiques certifiés. La traçabilité est assurée de la pêche/élevage jusqu\'à la livraison finale.'
+  },
+  {
+    question: 'Puis-je visiter vos installations aquacoles ?',
+    answer: 'Absolument ! Nous organisons régulièrement des visites de nos sites pour nos partenaires et clients potentiels. Contactez l\'agence la plus proche pour planifier une visite.'
+  }
+]
+
 function Agencies() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const pageRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -52,6 +76,10 @@ function Agencies() {
 
     return () => observer.disconnect()
   }, [])
+
+  const toggleFaq = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index)
+  }
 
   return (
     <div className="agencies-page" ref={pageRef}>
@@ -120,6 +148,34 @@ function Agencies() {
                 de répondre rapidement à vos besoins.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="faq-section">
+        <div className="container">
+          <h2 className="section-title">Questions Fréquentes</h2>
+          <p className="section-subtitle">
+            Retrouvez les réponses aux questions les plus courantes
+          </p>
+          <div className="faq-grid">
+            {faqItems.map((item, index) => (
+              <div 
+                key={index} 
+                className={`faq-item fade-in ${activeIndex === index ? 'active' : ''}`}
+              >
+                <div 
+                  className="faq-question" 
+                  onClick={() => toggleFaq(index)}
+                >
+                  <h4>{item.question}</h4>
+                  <span className="faq-icon">+</span>
+                </div>
+                <div className="faq-answer">
+                  <p>{item.answer}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

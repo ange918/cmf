@@ -80,7 +80,7 @@ function Products() {
           <div className="products-grid">
             {allProducts.map((product, index) => (
               <div key={index} className="fade-in">
-                <ProductCard {...product} />
+                <ProductCard {...product} showQuoteButton={true} />
               </div>
             ))}
           </div>
@@ -155,6 +155,17 @@ function Products() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="quote-cta-section">
+        <div className="container">
+          <h2 className="fade-in">Besoin d'un devis personnalisé ?</h2>
+          <p className="fade-in">
+            Notre équipe commerciale est à votre disposition pour étudier 
+            vos besoins et vous proposer une offre adaptée.
+          </p>
+          <a href="/contact" className="btn fade-in">Demander un devis gratuit</a>
         </div>
       </section>
     </div>

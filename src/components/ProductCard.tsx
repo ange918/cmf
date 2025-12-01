@@ -1,11 +1,14 @@
+import { Link } from 'react-router-dom'
+
 interface ProductCardProps {
   image: string
   title: string
   description: string
   items: string[]
+  showQuoteButton?: boolean
 }
 
-function ProductCard({ image, title, description, items }: ProductCardProps) {
+function ProductCard({ image, title, description, items, showQuoteButton = false }: ProductCardProps) {
   return (
     <div className="product-card">
       <div className="product-image">
@@ -19,6 +22,14 @@ function ProductCard({ image, title, description, items }: ProductCardProps) {
             <li key={index}>{item}</li>
           ))}
         </ul>
+        {showQuoteButton && (
+          <Link 
+            to={`/contact?product=${encodeURIComponent(title)}`} 
+            className="btn btn-quote"
+          >
+            Demander un devis
+          </Link>
+        )}
       </div>
     </div>
   )

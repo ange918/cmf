@@ -182,6 +182,56 @@ function About() {
           </div>
         </div>
       </section>
+
+      <section className="team-section">
+        <div className="container">
+          <h2 className="section-title">Notre Équipe</h2>
+          <p className="section-subtitle">
+            Une équipe passionnée et expérimentée au service de l'aquaculture durable
+          </p>
+          <div className="team-grid">
+            <div className="team-card fade-in">
+              <div className="team-image">
+                <img 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" 
+                  alt="Roméo David - Fondateur"
+                />
+              </div>
+              <div className="team-info">
+                <h4>Roméo David</h4>
+                <p className="role">Fondateur & Directeur Général</p>
+                <p>Expert en pêche durable avec plus de 20 ans d'expérience dans l'industrie halieutique.</p>
+              </div>
+            </div>
+            <div className="team-card fade-in">
+              <div className="team-image">
+                <img 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" 
+                  alt="Marie Akplo - Directrice Commerciale"
+                />
+              </div>
+              <div className="team-info">
+                <h4>Marie Akplo</h4>
+                <p className="role">Directrice Commerciale</p>
+                <p>Spécialiste des relations clients et du développement commercial en Afrique de l'Ouest.</p>
+              </div>
+            </div>
+            <div className="team-card fade-in">
+              <div className="team-image">
+                <img 
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" 
+                  alt="Dr. Emmanuel Mensah - Directeur Scientifique"
+                />
+              </div>
+              <div className="team-info">
+                <h4>Dr. Emmanuel Mensah</h4>
+                <p className="role">Directeur Scientifique</p>
+                <p>Docteur en biologie marine, responsable de la R&D et des partenariats scientifiques.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

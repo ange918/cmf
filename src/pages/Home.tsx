@@ -189,6 +189,87 @@ function Home() {
         </div>
       </section>
 
+      <section className="testimonials-section">
+        <div className="container">
+          <h2 className="section-title">Ce que disent nos clients</h2>
+          <p className="section-subtitle">
+            Découvrez les témoignages de nos partenaires et clients satisfaits
+          </p>
+          <div className="testimonials-grid">
+            <div className="testimonial-card fade-in">
+              <p className="testimonial-text">
+                COMATRA FISH MARINE est un partenaire de confiance. La qualité de leurs produits 
+                et leur professionnalisme nous permettent de garantir l'excellence à nos clients.
+              </p>
+              <div className="testimonial-author">
+                <div className="author-avatar">JD</div>
+                <div className="author-info">
+                  <h5>Jean Dupont</h5>
+                  <span>Directeur, Restaurant Le Marin</span>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card fade-in">
+              <p className="testimonial-text">
+                Leur engagement pour une pêche durable et responsable correspond parfaitement 
+                à nos valeurs. Une collaboration exemplaire depuis plus de 5 ans.
+              </p>
+              <div className="testimonial-author">
+                <div className="author-avatar">AK</div>
+                <div className="author-info">
+                  <h5>Aminata Koné</h5>
+                  <span>Responsable achats, Supermarché Océan</span>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card fade-in">
+              <p className="testimonial-text">
+                Service impeccable et produits toujours frais. COMATRA FISH MARINE est devenu 
+                notre fournisseur principal pour tous nos besoins en produits de la mer.
+              </p>
+              <div className="testimonial-author">
+                <div className="author-avatar">PB</div>
+                <div className="author-info">
+                  <h5>Pierre Beaumont</h5>
+                  <span>Chef exécutif, Hôtel Lagune</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="certifications-section">
+        <div className="container">
+          <h2 className="section-title">Nos Garanties</h2>
+          <p className="section-subtitle">
+            Des engagements concrets pour une qualité irréprochable
+          </p>
+          <div className="certifications-grid">
+            <div className="certification-card fade-in">
+              <div className="certification-icon">✓</div>
+              <h4>Qualité Certifiée</h4>
+              <p>Produits conformes aux normes sanitaires internationales</p>
+            </div>
+            <div className="certification-card fade-in">
+              <div className="certification-icon">❄️</div>
+              <h4>Chaîne du Froid</h4>
+              <p>Respect strict de la chaîne du froid de A à Z</p>
+            </div>
+            <div className="certification-card fade-in">
+              <div className="certification-icon">🌍</div>
+              <h4>Pêche Durable</h4>
+              <p>Pratiques respectueuses de l'environnement marin</p>
+            </div>
+            <div className="certification-card fade-in">
+              <div className="certification-icon">📋</div>
+              <h4>Traçabilité</h4>
+              <p>Suivi complet de l'origine à la livraison</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="contact-cta">
         <div className="container">
           <h2>Prêt à collaborer avec nous ?</h2>
