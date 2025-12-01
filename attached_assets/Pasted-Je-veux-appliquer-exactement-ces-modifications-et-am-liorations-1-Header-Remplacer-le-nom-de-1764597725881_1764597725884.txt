@@ -1,0 +1,111 @@
+Je veux appliquer exactement ces modifications et améliorations :
+🔷 1. Header
+Remplacer le nom de l'entreprise dans le header par un logo image situé dans /public/logo.png.
+Conserver la navigation actuelle.
+🔷 2. Informations sur l’entreprise
+Sur toutes les pages, dans le footer ou une petite section dédiée :
+Ajouter :
+Entreprise basée en France, avec sous-départements en Côte d’Ivoire, Bénin et Togo.
+Ajouter des icônes Boxicons (https://boxicons.com/) pour illustrer les pays.
+🔷 3. Section Hero (Accueil)
+Remplacer la galerie d’images actuelle par une bande roulante infinie (image slider horizontal auto-scroll).
+Doit être fluide, responsive, et compatible mobile.
+🔷 4. Nouvelle section “Partenaires”
+À placer après la section “Nos garanties” :
+Titre : Nos Partenaires & Collaborations
+Paragraphe : expliquer que l'entreprise collabore avec des partenaires européens, africains et internationaux.
+Style épuré + icônes Boxicons pour illustrer.
+🔷 5. Page À-propos
+La section statistiques doit être animée :
+Comptage animé (counter-up)
+Animation au scroll (Intersection Observer)
+🔷 6. Page Produits
+❌ Supprimer les catégories :
+Poisson de mer
+Poisson d’eau douce
+Produits transformés
+✔ Transformer les boutons “Demander un devis” en :
+👉 Bouton : “En savoir plus”
+Chaque bouton ouvre une nouvelle page dédiée, avec un design propre, contenant :
+🐟 Page “Poissons nobles”
+Créer une page affichant la liste + images + descriptions courtes des produits :
+Dorade
+Bar (Loup de mer)
+Tilapia eau salée
+Mérou
+Vivaneau (Snapper)
+Maigre
+Sériole (Yellowtail)
+Saumon (partiellement en mer)
+Thon (engraissement en mer)
+🦐🐚 Page “Crustacés & Coquillages”
+Diviser en deux sections :
+🦐 Crustacés
+Crevette
+Gambas
+Langoustine
+Crabe
+Homard
+🐚 Coquillages
+Huître
+Moule
+Palourde
+Coquille Saint-Jacques
+Couteau de mer
+Chaque élément doit avoir une image + description + mise en page élégante.
+⚓ Page “Équipement aquacole”
+Ajouter des images d’équipements :
+Structures
+Bateaux
+Filets
+Bassins
+Accessoires techniques
+Présentation propre en grille.
+🔷 7. Typographie
+Mettre une police raffinée et professionnelle :
+→ “Poppins”, “Montserrat” ou “Playfair Display” selon la page.
+Import Google Fonts global.
+🔷 8. Image d’arrière-plan par page
+Pour chaque page, la première section doit avoir :
+une image background-full-cover
+un overlay noir transparent 40%
+un titre centré
+Exemple :
+background: url('/public/bg-produits.jpg');
+🔷 9. Technologies à utiliser
+React + Vite + TypeScript
+Boxicons
+CSS modules ou fichiers CSS classiques compatibles avec la structure Vite
+Aucune dépendance lourde inutile
+Composants bien séparés
+Responsive mobile/tablette
+🔷 10. Structure à respecter
+Conserver strictement cette structure (fournie sur l’image) :
+Copier le code
+
+public/
+   logo.png
+   images/...
+src/
+   assets/
+   components/
+   pages/
+   App.tsx
+   App.css
+   index.css
+   main.tsx
+index.html
+vite.config.ts
+🔷 Résultat attendu
+👉 Génère directement tout le code complet :
+App.tsx
+Les pages : Accueil, À-propos, Produits, Poissons nobles, Crustacés & Coquillages, Équipement aquacole
+Tous les composants
+Le CSS
+Le slider infini
+L’animation des statistiques
+La section partenaires
+Le header modifié
+Les backgrounds
+Le routage React (react-router-dom)
+Le site doit ressembler au précédent, mais corrigé, amélioré, plus professionnel, plus dynamique.

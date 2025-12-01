@@ -6,6 +6,9 @@ import About from './pages/About'
 import Products from './pages/Products'
 import Agencies from './pages/Agencies'
 import Contact from './pages/Contact'
+import PoissonsNobles from './pages/PoissonsNobles'
+import CrustacesCoquillages from './pages/CrustacesCoquillages'
+import EquipementAquacole from './pages/EquipementAquacole'
 import './App.css'
 
 function App() {
@@ -19,6 +22,9 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/agencies" element={<Agencies />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/poissons-nobles" element={<PoissonsNobles />} />
+          <Route path="/crustaces-coquillages" element={<CrustacesCoquillages />} />
+          <Route path="/equipement-aquacole" element={<EquipementAquacole />} />
         </Routes>
       </main>
       <Footer />

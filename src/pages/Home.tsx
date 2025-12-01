@@ -1,9 +1,9 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Hero from '../components/Hero'
 import AboutSection from '../components/AboutSection'
 import VideoSection from '../components/VideoSection'
-import ProductCard from '../components/ProductCard'
+import Partners from '../components/Partners'
 import AgencyCard from '../components/AgencyCard'
 
 const products = [
@@ -11,19 +11,22 @@ const products = [
     image: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250',
     title: 'Poissons nobles',
     description: 'Maigre, daurade, carangue, tilapia, silures de haute qualité',
-    items: ['Tilapia d\'élevage bio', 'Silures africains', 'Poissons marins frais']
+    link: '/poissons-nobles',
+    icon: 'bx-water'
   },
   {
     image: 'https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250',
     title: 'Crustacés & Coquillages',
     description: 'Sélection premium de produits de la mer',
-    items: ['Gambas fraîches', 'Langouste locale', 'Coquillages variés']
+    link: '/crustaces-coquillages',
+    icon: 'bxs-droplet'
   },
   {
     image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250',
     title: 'Équipements & Aliments',
     description: 'Solutions complètes pour l\'aquaculture',
-    items: ['Aliments pour poissons', 'Équipements aquacoles', 'Systèmes de recirculation']
+    link: '/equipement-aquacole',
+    icon: 'bx-cog'
   }
 ]
 
@@ -44,18 +47,7 @@ const agencies = [
   }
 ]
 
-const galleryImages = [
-  { src: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200', alt: 'Ferme aquacole moderne' },
-  { src: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200', alt: 'Marché aux poissons frais' },
-  { src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200', alt: 'Installation aquacole' },
-  { src: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200', alt: 'Élevage en cage marine' },
-  { src: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200', alt: 'Poissons nobles frais' },
-  { src: 'https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200', alt: 'Crevettes et crustacés' }
-]
-
 function Home() {
-  const [lightboxOpen, setLightboxOpen] = useState(false)
-  const [currentImage, setCurrentImage] = useState(0)
   const sectionsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -76,25 +68,6 @@ function Home() {
     return () => observer.disconnect()
   }, [])
 
-  const openLightbox = (index: number) => {
-    setCurrentImage(index)
-    setLightboxOpen(true)
-    document.body.style.overflow = 'hidden'
-  }
-
-  const closeLightbox = () => {
-    setLightboxOpen(false)
-    document.body.style.overflow = 'auto'
-  }
-
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % galleryImages.length)
-  }
-
-  const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
-  }
-
   return (
     <div ref={sectionsRef}>
       <Hero />
@@ -112,7 +85,21 @@ function Home() {
           <div className="products-grid">
             {products.map((product, index) => (
               <div key={index} className="fade-in">
-                <ProductCard {...product} />
+                <div className="product-card">
+                  <div className="product-image">
+                    <img src={product.image} alt={product.title} />
+                    <div className="product-icon-badge">
+                      <i className={`bx ${product.icon}`}></i>
+                    </div>
+                  </div>
+                  <div className="product-content">
+                    <h3>{product.title}</h3>
+                    <p>{product.description}</p>
+                    <Link to={product.link} className="btn-learn-more">
+                      <i className='bx bx-right-arrow-alt'></i> En savoir plus
+                    </Link>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -124,54 +111,29 @@ function Home() {
           <h2 className="section-title">Services annexes</h2>
           <div className="services-grid">
             <div className="service-card fade-in">
-              <div className="service-icon">🚚</div>
+              <div className="service-icon">
+                <i className='bx bxs-truck'></i>
+              </div>
               <h4>Logistique</h4>
               <p>Transport spécialisé et sécurisé pour produits frais</p>
             </div>
             <div className="service-card fade-in">
-              <div className="service-icon">📦</div>
+              <div className="service-icon">
+                <i className='bx bxs-package'></i>
+              </div>
               <h4>Conditionnement</h4>
               <p>Emballage professionnel respectant la chaîne du froid</p>
             </div>
             <div className="service-card fade-in">
-              <div className="service-icon">🕐</div>
+              <div className="service-icon">
+                <i className='bx bxs-time'></i>
+              </div>
               <h4>Livraison</h4>
               <p>Livraison sous température contrôlée dans les délais</p>
             </div>
           </div>
         </div>
       </section>
-
-      <section className="gallery-section section">
-        <div className="container">
-          <h2 className="section-title">Galerie</h2>
-          <div className="gallery-grid">
-            {galleryImages.map((image, index) => (
-              <div 
-                key={index} 
-                className="gallery-item fade-in"
-                onClick={() => openLightbox(index)}
-              >
-                <img src={image.src} alt={image.alt} />
-                <div className="gallery-overlay">
-                  <span>+</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {lightboxOpen && (
-        <div className="lightbox" onClick={closeLightbox}>
-          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <button className="lightbox-close" onClick={closeLightbox}>&times;</button>
-            <img src={galleryImages[currentImage].src.replace('300&h=200', '1200&h=800')} alt={galleryImages[currentImage].alt} />
-            <button className="lightbox-nav lightbox-prev" onClick={prevImage}>&lt;</button>
-            <button className="lightbox-nav lightbox-next" onClick={nextImage}>&gt;</button>
-          </div>
-        </div>
-      )}
 
       <section className="agencies-section section">
         <div className="container">
@@ -247,22 +209,30 @@ function Home() {
           </p>
           <div className="certifications-grid">
             <div className="certification-card fade-in">
-              <div className="certification-icon">✓</div>
+              <div className="certification-icon">
+                <i className='bx bx-check-shield'></i>
+              </div>
               <h4>Qualité Certifiée</h4>
               <p>Produits conformes aux normes sanitaires internationales</p>
             </div>
             <div className="certification-card fade-in">
-              <div className="certification-icon">❄️</div>
+              <div className="certification-icon">
+                <i className='bx bxs-thermometer'></i>
+              </div>
               <h4>Chaîne du Froid</h4>
               <p>Respect strict de la chaîne du froid de A à Z</p>
             </div>
             <div className="certification-card fade-in">
-              <div className="certification-icon">🌍</div>
+              <div className="certification-icon">
+                <i className='bx bx-world'></i>
+              </div>
               <h4>Pêche Durable</h4>
               <p>Pratiques respectueuses de l'environnement marin</p>
             </div>
             <div className="certification-card fade-in">
-              <div className="certification-icon">📋</div>
+              <div className="certification-icon">
+                <i className='bx bx-list-check'></i>
+              </div>
               <h4>Traçabilité</h4>
               <p>Suivi complet de l'origine à la livraison</p>
             </div>
@@ -270,11 +240,15 @@ function Home() {
         </div>
       </section>
 
+      <Partners />
+
       <section className="contact-cta">
         <div className="container">
           <h2>Prêt à collaborer avec nous ?</h2>
           <p>Contactez notre équipe pour vos projets d'aquaculture et vos besoins en produits aquatiques</p>
-          <Link to="/contact" className="btn btn-secondary">Nous contacter</Link>
+          <Link to="/contact" className="btn btn-secondary">
+            <i className='bx bx-envelope'></i> Nous contacter
+          </Link>
         </div>
       </section>
     </div>
