@@ -4,6 +4,14 @@
 Professional website for COMATRA FISH MARINE, a sustainable fishing and aquaculture company operating in West Africa (Benin, Togo, Ivory Coast) with headquarters in France. Built with React, TypeScript, and Vite.
 
 ## Recent Changes
+- **December 01, 2025**: Added new sections and quote functionality
+  - Added "Demander un devis" buttons on product cards (Products page)
+  - Added Testimonials section on homepage
+  - Added Certifications/Guarantees section on homepage
+  - Added Team section on About page
+  - Added Quote CTA section on Products page
+  - Added interactive FAQ section on Agencies page
+
 - **December 01, 2025**: Complete website implementation
   - Built responsive header with sticky navigation and hamburger menu
   - Created Hero section with ocean background and CTA buttons
@@ -23,14 +31,14 @@ Professional website for COMATRA FISH MARINE, a sustainable fishing and aquacult
     Footer.tsx      - Site footer with links and social media
     Hero.tsx        - Full-screen hero section with background image
     AboutSection.tsx - Company history and features
-    VideoSection.tsx - Video presentation section
-    ProductCard.tsx  - Reusable product card component
+    VideoSection.tsx - Video presentation section (with fallback)
+    ProductCard.tsx  - Reusable product card with optional quote button
     AgencyCard.tsx   - Reusable agency card component
   /pages
-    Home.tsx        - Homepage with all sections
-    About.tsx       - Company history, values, and partners
-    Products.tsx    - Products and services catalog
-    Agencies.tsx    - Agency locations and map
+    Home.tsx        - Homepage with Hero, About, Video, Products, Services, Gallery, Agencies, Testimonials, Certifications, CTA
+    About.tsx       - Company history, values, partners, stats, and team
+    Products.tsx    - Products catalog with quote buttons, services, equipment, and quote CTA
+    Agencies.tsx    - Agency locations, map placeholder, advantages, and FAQ
     Contact.tsx     - Contact form with validation
   App.tsx           - Main app with React Router
   App.css           - All component and page styles
@@ -56,6 +64,11 @@ Professional website for COMATRA FISH MARINE, a sustainable fishing and aquacult
 - Gallery with lightbox
 - Form validation (name, email, message required)
 - React Router for SPA navigation
+- Product quote buttons linking to contact form
+- Interactive FAQ accordion
+- Testimonials carousel
+- Team member profiles
+- Certifications/guarantees display
 
 ## Development
 - **Start dev server**: `npm run dev` (port 5000)
