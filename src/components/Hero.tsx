@@ -18,7 +18,7 @@ function Hero() {
       </div>
       
       <div className="hero-content">
-        <h1 className="hero-title">COMATRA FISH MARINE</h1>
+        <h1 className="hero-title">CFM</h1>
         <p className="hero-subtitle">
           Qualité, durabilité et innovation pour une alimentation halieutique saine.
           <br /><br />

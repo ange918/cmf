@@ -34,7 +34,7 @@ const allAgencies = [
 
 const faqItems = [
   {
-    question: 'Comment passer une commande auprès de COMATRA FISH MARINE ?',
+    question: 'Comment passer une commande auprès de CFM ?',
     answer: 'Vous pouvez passer commande en contactant directement l\'agence la plus proche de vous par téléphone ou email, ou en remplissant notre formulaire de demande de devis en ligne. Notre équipe commerciale vous recontactera dans les 24h.',
     icon: 'bx-cart'
   },
@@ -100,7 +100,7 @@ function Agencies() {
         <div className="container">
           <h2 className="section-title">Nos Implantations</h2>
           <p className="section-subtitle">
-            COMATRA FISH MARINE dispose d'un siège administratif en France et 
+            CFM dispose d'un siège administratif en France et 
             d'agences opérationnelles dans les principaux ports d'Afrique de l'Ouest 
             pour vous servir au plus près.
           </p>

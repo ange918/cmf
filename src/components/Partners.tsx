@@ -4,7 +4,7 @@ function Partners() {
       <div className="container">
         <h2 className="section-title">Nos Partenaires & Collaborations</h2>
         <p className="section-subtitle">
-          COMATRA FISH MARINE collabore avec des partenaires européens, africains et 
+          CFM collabore avec des partenaires européens, africains et 
           internationaux pour garantir l'excellence de nos produits et services. Notre 
           réseau s'étend sur trois continents, favorisant l'innovation et le développement durable.
         </p>

@@ -21,7 +21,7 @@ function Header() {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo" onClick={closeMenu}>
-          <img src="/logo.png" alt="COMATRA FISH MARINE" className="logo-image" />
+          <img src="/logo.png" alt="CFM" className="logo-image" />
         </Link>
         
         <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>

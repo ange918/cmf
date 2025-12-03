@@ -29,7 +29,7 @@ function Footer() {
 
         <div className="footer-grid">
           <div className="footer-brand">
-            <h3>COMATRA FISH MARINE</h3>
+            <h3>CFM</h3>
             <p>
               Acteur clé de la pêche durable, aquaculture innovante et 
               distribution de produits aquatiques. Entreprise basée en France 
@@ -68,7 +68,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} COMATRA FISH MARINE. Tous droits réservés.</p>
+          <p>&copy; {currentYear} CFM. Tous droits réservés.</p>
           <div className="social-links">
             <a href="#" aria-label="Facebook">
               <i className='bx bxl-facebook'></i>

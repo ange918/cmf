@@ -260,7 +260,7 @@ function Home() {
           <div className="testimonials-grid">
             <div className="testimonial-card fade-in">
               <p className="testimonial-text">
-                COMATRA FISH MARINE est un partenaire de confiance. La qualité de leurs produits 
+                CFM est un partenaire de confiance. La qualité de leurs produits 
                 et leur professionnalisme nous permettent de garantir l'excellence à nos clients.
               </p>
               <div className="testimonial-author">
@@ -286,7 +286,7 @@ function Home() {
             </div>
             <div className="testimonial-card fade-in">
               <p className="testimonial-text">
-                Service impeccable et produits toujours frais. COMATRA FISH MARINE est devenu 
+                Service impeccable et produits toujours frais. CFM est devenu 
                 notre fournisseur principal pour tous nos besoins en produits de la mer.
               </p>
               <div className="testimonial-author">

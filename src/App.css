@@ -614,6 +614,14 @@ main {
   background-color: #000;
 }
 
+.video-presentation-youtube {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+  background-color: #000;
+}
+
 /* Products Section */
 .products-section {
   background-color: var(--white);

@@ -39,7 +39,7 @@ function About() {
               <h3>Notre Histoire</h3>
               <p>
                 Créée en 2013 par Mr Roméo David, expert reconnu en pêche durable 
-                et aquaculture, COMATRA FISH MARINE s'est imposée comme un acteur 
+                et aquaculture, CFM s'est imposée comme un acteur 
                 majeur de l'industrie halieutique en Afrique de l'Ouest.
               </p>
               <p>
@@ -56,7 +56,7 @@ function About() {
             <div className="history-image">
               <img 
                 src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Installation aquacole COMATRA" 
+                alt="Installation aquacole CFM" 
               />
             </div>
           </div>
@@ -111,7 +111,7 @@ function About() {
             <div className="history-text">
               <h3>Notre Expertise</h3>
               <p>
-                COMATRA FISH MARINE dispose d'une expertise technique reconnue 
+                CFM dispose d'une expertise technique reconnue 
                 dans les techniques aquacoles innovantes à recirculation bio 
                 sécurisée et d'un réseau fiable d'armateurs.
               </p>
