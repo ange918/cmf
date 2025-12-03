@@ -175,12 +175,13 @@ function Agencies() {
             {faqItems.map((item, index) => (
               <div 
                 key={index} 
-                className={`faq-item fade-in ${activeIndex === index ? 'active' : ''}`}
+                className={`faq-item ${activeIndex === index ? 'active' : ''}`}
               >
                 <button 
                   className="faq-question" 
                   onClick={() => toggleFaq(index)}
                   aria-expanded={activeIndex === index}
+                  type="button"
                 >
                   <div className="faq-question-content">
                     <span className="faq-question-icon">
@@ -192,9 +193,11 @@ function Agencies() {
                     <i className={`bx ${activeIndex === index ? 'bx-chevron-up' : 'bx-chevron-down'}`}></i>
                   </span>
                 </button>
-                <div className="faq-answer">
-                  <p>{item.answer}</p>
-                </div>
+                {activeIndex === index && (
+                  <div className="faq-answer active">
+                    <p>{item.answer}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
