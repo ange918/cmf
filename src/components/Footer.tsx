@@ -45,6 +45,11 @@ function Footer() {
               <li><Link to="/products"><i className='bx bx-package'></i> Produits</Link></li>
               <li><Link to="/agencies"><i className='bx bx-map'></i> Agences</Link></li>
               <li><Link to="/contact"><i className='bx bx-envelope'></i> Contact</Link></li>
+              <li>
+                <a href="/documentation-cfm.pdf" download="Documentation-CFM.pdf">
+                  <i className='bx bx-file-blank'></i> Documentation
+                </a>
+              </li>
             </ul>
           </div>
 
