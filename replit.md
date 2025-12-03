@@ -9,6 +9,7 @@ Professional website for COMATRA FISH MARINE, a sustainable fishing and aquacult
   - Added ScrollToTop component for automatic scroll to top on page navigation
   - Fixed FAQ accordion - questions now stay visible when clicked
   - Improved FAQ transitions and styling
+  - Added video background support for Equipement Aquacole page hero section (video file: /public/hero.mp4)
 
 - **December 01, 2025**: Visual and structural enhancements
   - Added logo image in header (replacing text-based branding)

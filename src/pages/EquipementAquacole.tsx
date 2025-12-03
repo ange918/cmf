@@ -106,9 +106,18 @@ function EquipementAquacole() {
 
   return (
     <div className="product-detail-page" ref={pageRef}>
-      <div className="page-header-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)' }}>
+      <div className="page-header-video">
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="hero-video-bg"
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
         <div className="page-header-overlay"></div>
-        <div className="container">
+        <div className="container hero-content">
           <h1><i className='bx bx-cog'></i> Équipement Aquacole</h1>
           <p>Solutions professionnelles pour l'aquaculture moderne</p>
         </div>

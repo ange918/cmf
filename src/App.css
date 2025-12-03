@@ -380,6 +380,89 @@ main {
   opacity: 0.9;
 }
 
+/* Page Header with Video Background */
+.page-header-video {
+  position: relative;
+  padding: 150px 0 80px;
+  text-align: center;
+  color: var(--white);
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  object-fit: cover;
+}
+
+.page-header-video .page-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 48, 101, 0.6);
+  z-index: 1;
+}
+
+.page-header-video .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.page-header-video h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-header-video h1 i {
+  font-size: 2.5rem;
+}
+
+.page-header-video p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .page-header-video {
+    min-height: 300px;
+    padding: 120px 0 60px;
+  }
+
+  .page-header-video h1 {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .page-header-video h1 i {
+    font-size: 2rem;
+  }
+
+  .page-header-video p {
+    font-size: 1rem;
+  }
+}
+
 /* About Section */
 .about-section {
   background-color: var(--gray-light);
