@@ -4,16 +4,11 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-background">
-        <div className="hero-video-container">
-          <iframe
-            src="https://www.youtube.com/embed/GmYqGe4fWCQ?autoplay=1&mute=1&loop=1&playlist=GmYqGe4fWCQ&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=https://replit.com"
-            title="Video background"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="hero-youtube-bg"
-          ></iframe>
-        </div>
+        <img 
+          src="/herobackground.jpeg" 
+          alt="CFM - Bateau de pêche" 
+          className="hero-bg-image"
+        />
         <div className="hero-overlay"></div>
       </div>
       

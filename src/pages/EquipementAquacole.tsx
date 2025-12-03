@@ -6,7 +6,7 @@ const equipements = [
     items: [
       {
         name: 'Cages flottantes',
-        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300',
+        image: '/structure.jpeg',
         description: 'Cages marines robustes pour l\'élevage en mer, résistantes aux conditions météorologiques extrêmes.'
       },
       {
@@ -66,12 +66,12 @@ const equipements = [
     items: [
       {
         name: 'Aérateurs',
-        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300',
+        image: '/aerateur.jpeg',
         description: 'Systèmes d\'oxygénation performants pour maintenir une qualité d\'eau optimale.'
       },
       {
         name: 'Distributeurs d\'aliments',
-        image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300',
+        image: '/distributeur.jpeg',
         description: 'Distributeurs automatiques pour une alimentation régulière et contrôlée.'
       },
       {
