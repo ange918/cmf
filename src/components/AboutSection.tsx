@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -59,6 +60,9 @@ function AboutSection() {
                 <div className="stat-label">Pays présents</div>
               </div>
             </div>
+            <Link to="/about" className="btn btn-primary about-btn">
+              <i className='bx bx-info-circle'></i> En savoir plus
+            </Link>
           </div>
         </div>
 

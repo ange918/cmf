@@ -427,6 +427,13 @@ main {
   text-align: center;
 }
 
+.about-btn {
+  margin-top: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
@@ -1986,7 +1993,7 @@ main {
   border-radius: 15px;
   margin-bottom: 15px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid transparent;
 }
 
@@ -2007,9 +2014,11 @@ main {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  background: none;
+  background: transparent;
   border: none;
   text-align: left;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .faq-question-content {
@@ -2062,11 +2071,12 @@ main {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.4s ease-out, padding 0.3s ease;
+  padding: 0 25px 0 85px;
 }
 
 .faq-item.active .faq-answer {
-  max-height: 300px;
+  max-height: 500px;
   padding: 0 25px 25px 85px;
 }
 
