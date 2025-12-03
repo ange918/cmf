@@ -4,6 +4,12 @@
 Professional website for COMATRA FISH MARINE, a sustainable fishing and aquaculture company operating in West Africa (Benin, Togo, Ivory Coast) with headquarters in France. Built with React, TypeScript, and Vite.
 
 ## Recent Changes
+- **December 03, 2025**: Navigation and UX improvements
+  - Added "En savoir plus" button in About section on homepage linking to About page
+  - Added ScrollToTop component for automatic scroll to top on page navigation
+  - Fixed FAQ accordion - questions now stay visible when clicked
+  - Improved FAQ transitions and styling
+
 - **December 01, 2025**: Visual and structural enhancements
   - Added logo image in header (replacing text-based branding)
   - Enhanced Footer with Boxicons and France HQ info with West African sub-departments
@@ -34,7 +40,8 @@ Professional website for COMATRA FISH MARINE, a sustainable fishing and aquacult
     Header.tsx        - Sticky navigation with logo image and responsive hamburger menu
     Footer.tsx        - Site footer with France HQ info, links, and Boxicons social media
     Hero.tsx          - Full-screen hero section with infinite scrolling image slider
-    AboutSection.tsx  - Company history and features
+    AboutSection.tsx  - Company history, features, and link to About page
+    ScrollToTop.tsx   - Scroll to top on route change
     VideoSection.tsx  - Video presentation section (with fallback)
     ProductCard.tsx   - Reusable product card component
     AgencyCard.tsx    - Reusable agency card component
