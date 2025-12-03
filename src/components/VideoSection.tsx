@@ -10,7 +10,7 @@ function VideoSection() {
         
         <div className="video-container">
           <iframe
-            src="https://www.youtube.com/embed/GmYqGe4fWCQ?rel=0&modestbranding=1"
+            src="https://www.youtube.com/embed/GmYqGe4fWCQ?autoplay=1&mute=1&loop=1&playlist=GmYqGe4fWCQ&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
             title="Présentation CFM"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
