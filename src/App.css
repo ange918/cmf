@@ -1580,6 +1580,27 @@ main {
   line-height: 1.6;
 }
 
+.partners-paragraph {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.partners-paragraph p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--gray-dark);
+  margin-bottom: 20px;
+}
+
+.partners-paragraph p:last-child {
+  margin-bottom: 0;
+}
+
+.partners-paragraph strong {
+  color: var(--primary-dark);
+}
+
 @media (max-width: 768px) {
   .values-grid {
     grid-template-columns: 1fr;

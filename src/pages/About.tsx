@@ -137,41 +137,23 @@ function About() {
 
       <section className="section" style={{ background: 'var(--gray-light)' }}>
         <div className="container">
-          <h2 className="section-title">Nos Partenaires Scientifiques</h2>
-          <p className="section-subtitle">
-            Nous collaborons avec des institutions scientifiques de renommée internationale
-          </p>
-          
-          <div className="values-grid">
-            <div className="value-card fade-in">
-              <div className="icon">
-                <i className='bx bxs-graduation'></i>
-              </div>
-              <h4>Université de Montpellier</h4>
-              <p>
-                Reconnue pour son expertise en sciences marines et aquaculture durable.
-              </p>
-            </div>
-            <div className="value-card fade-in">
-              <div className="icon">
-                <i className='bx bx-globe'></i>
-              </div>
-              <h4>IRD Montpellier</h4>
-              <p>
-                Institut de Recherche pour le Développement avec qui nous menons 
-                des projets de recherche innovants.
-              </p>
-            </div>
-            <div className="value-card fade-in">
-              <div className="icon">
-                <i className='bx bx-test-tube'></i>
-              </div>
-              <h4>INRA</h4>
-              <p>
-                Institut National de Recherche Agronomique qui nous accompagne 
-                dans le développement de techniques d'élevage respectueuses.
-              </p>
-            </div>
+          <h2 className="section-title">Nos Potentiels Partenaires Scientifiques</h2>
+          <div className="partners-paragraph fade-in">
+            <p>
+              Dans le cadre de notre développement et de notre engagement pour l'innovation, 
+              CFM envisage des collaborations avec des institutions scientifiques de renommée 
+              internationale. Parmi nos potentiels partenaires figurent l'<strong>Université de Montpellier</strong>, 
+              reconnue pour son expertise en sciences marines et aquaculture durable, l'<strong>IRD 
+              (Institut de Recherche pour le Développement)</strong> basé à Montpellier, avec qui nous 
+              pourrions mener des projets de recherche innovants, ainsi que l'<strong>INRA (Institut 
+              National de Recherche Agronomique)</strong> qui pourrait nous accompagner dans le 
+              développement de techniques d'élevage respectueuses de l'environnement.
+            </p>
+            <p>
+              Ces partenariats potentiels s'inscrivent dans notre vision à long terme d'allier 
+              excellence scientifique et pratiques durables pour garantir la qualité de nos 
+              produits et services.
+            </p>
           </div>
         </div>
       </section>
