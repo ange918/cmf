@@ -147,7 +147,31 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  background: var(--primary-dark);
+}
+
+.hero-video-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-youtube-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 177.77vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: none;
 }
 
 .hero-overlay {
