@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Cog6ToothIcon, CubeIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
 
 const equipements = [
     {
@@ -131,7 +132,7 @@ function EquipementAquacole() {
                 <div className="page-header-overlay"></div>
                 <div className="container hero-content">
                     <h1>
-                        <i className="bx bx-cog"></i> Équipement Aquacole
+                        <Cog6ToothIcon className="heroicon header-icon" /> Équipement Aquacole
                     </h1>
                     <p>Solutions professionnelles pour l'aquaculture moderne</p>
                 </div>
@@ -156,9 +157,7 @@ function EquipementAquacole() {
                         }}>
                         <div className="container">
                             <h2 className="section-title">
-                                <i
-                                    className="bx bx-cube"
-                                    style={{ marginRight: '10px' }}></i>
+                                <CubeIcon className="heroicon section-title-icon" style={{ marginRight: '10px' }} />
                                 {section.category}
                             </h2>
 
@@ -190,7 +189,7 @@ function EquipementAquacole() {
                         de vos équipements.
                     </p>
                     <a href="/contact" className="btn btn-primary">
-                        <i className="bx bx-envelope"></i> Demander un devis
+                        <EnvelopeIcon className="heroicon" /> Demander un devis
                     </a>
                 </div>
             </section>

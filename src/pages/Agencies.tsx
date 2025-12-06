@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { BuildingOffice2Icon, MapPinIcon, GlobeAltIcon, UserGroupIcon, BoltIcon, ShoppingCartIcon, ClockIcon, BriefcaseIcon, ShieldCheckIcon, HomeModernIcon, ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 import AgencyCard from '../components/AgencyCard'
 
 const allAgencies = [
@@ -36,27 +37,27 @@ const faqItems = [
   {
     question: 'Comment passer une commande auprès de CFM ?',
     answer: 'Vous pouvez passer commande en contactant directement l\'agence la plus proche de vous par téléphone ou email, ou en remplissant notre formulaire de demande de devis en ligne. Notre équipe commerciale vous recontactera dans les 24h.',
-    icon: 'bx-cart'
+    IconComponent: ShoppingCartIcon
   },
   {
     question: 'Quels sont vos délais de livraison ?',
     answer: 'Nos délais de livraison varient selon votre localisation et le volume commandé. En général, nous livrons sous 24 à 48h dans les zones proches de nos agences, et sous 3 à 5 jours pour les livraisons plus éloignées.',
-    icon: 'bx-time-five'
+    IconComponent: ClockIcon
   },
   {
     question: 'Proposez-vous des solutions pour les professionnels ?',
     answer: 'Oui, nous travaillons principalement avec des professionnels : restaurants, hôtels, supermarchés, grossistes. Nous proposons des tarifs adaptés aux volumes et des conditions de paiement flexibles.',
-    icon: 'bx-briefcase'
+    IconComponent: BriefcaseIcon
   },
   {
     question: 'Comment garantissez-vous la fraîcheur des produits ?',
     answer: 'Nous disposons d\'une chaîne logistique complète avec des véhicules réfrigérés et des entrepôts frigorifiques certifiés. La traçabilité est assurée de la pêche/élevage jusqu\'à la livraison finale.',
-    icon: 'bx-check-shield'
+    IconComponent: ShieldCheckIcon
   },
   {
     question: 'Puis-je visiter vos installations aquacoles ?',
     answer: 'Absolument ! Nous organisons régulièrement des visites de nos sites pour nos partenaires et clients potentiels. Contactez l\'agence la plus proche pour planifier une visite.',
-    icon: 'bx-building-house'
+    IconComponent: HomeModernIcon
   }
 ]
 
@@ -91,7 +92,7 @@ function Agencies() {
       <div className="page-header-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)' }}>
         <div className="page-header-overlay"></div>
         <div className="container">
-          <h1><i className='bx bx-buildings'></i> Nos Agences</h1>
+          <h1><BuildingOffice2Icon className="heroicon header-icon" /> Nos Agences</h1>
           <p>Présents en France et dans 3 pays d'Afrique de l'Ouest</p>
         </div>
       </div>
@@ -121,7 +122,7 @@ function Agencies() {
             Visualisez nos agences en Afrique de l'Ouest
           </p>
           <div className="map-placeholder fade-in">
-            <i className='bx bx-map-alt'></i>
+            <MapPinIcon className="heroicon map-icon" />
             <p>Carte interactive Google Maps - Nos 4 agences</p>
           </div>
         </div>
@@ -133,7 +134,7 @@ function Agencies() {
           <div className="services-grid">
             <div className="service-card fade-in">
               <div className="service-icon">
-                <i className='bx bx-globe'></i>
+                <GlobeAltIcon className="heroicon" />
               </div>
               <h4>Présence régionale</h4>
               <p>
@@ -143,7 +144,7 @@ function Agencies() {
             </div>
             <div className="service-card fade-in">
               <div className="service-icon">
-                <i className='bx bx-group'></i>
+                <UserGroupIcon className="heroicon" />
               </div>
               <h4>Service personnalisé</h4>
               <p>
@@ -153,7 +154,7 @@ function Agencies() {
             </div>
             <div className="service-card fade-in">
               <div className="service-icon">
-                <i className='bx bx-bolt'></i>
+                <BoltIcon className="heroicon" />
               </div>
               <h4>Réactivité</h4>
               <p>
@@ -185,12 +186,16 @@ function Agencies() {
                 >
                   <div className="faq-question-content">
                     <span className="faq-question-icon">
-                      <i className={`bx ${item.icon}`}></i>
+                      <item.IconComponent className="heroicon" />
                     </span>
                     <h4>{item.question}</h4>
                   </div>
                   <span className="faq-chevron">
-                    <i className={`bx ${activeIndex === index ? 'bx-chevron-up' : 'bx-chevron-down'}`}></i>
+                    {activeIndex === index ? (
+                      <ChevronUpIcon className="heroicon" />
+                    ) : (
+                      <ChevronDownIcon className="heroicon" />
+                    )}
                   </span>
                 </button>
                 {activeIndex === index && (

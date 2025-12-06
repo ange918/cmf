@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { ArrowRightIcon, TruckIcon, CubeIcon, ClockIcon, ShieldCheckIcon, GlobeAltIcon, ClipboardDocumentCheckIcon, EnvelopeIcon, Cog6ToothIcon } from '@heroicons/react/24/outline'
 import Hero from '../components/Hero'
 import AboutSection from '../components/AboutSection'
 import VideoSection from '../components/VideoSection'
@@ -70,21 +71,21 @@ const products = [
     title: 'Poissons nobles',
     description: 'Maigre, daurade, carangue, tilapia, silures de haute qualité',
     link: '/poissons-nobles',
-    icon: 'bx-water'
+    iconType: 'fish'
   },
   {
     image: 'https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250',
     title: 'Crustacés & Coquillages',
     description: 'Sélection premium de produits de la mer',
     link: '/crustaces-coquillages',
-    icon: 'bxs-droplet'
+    iconType: 'shellfish'
   },
   {
     image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250',
     title: 'Équipements & Aliments',
     description: 'Solutions complètes pour l\'aquaculture',
     link: '/equipement-aquacole',
-    icon: 'bx-cog'
+    iconType: 'equipment'
   }
 ]
 
@@ -104,6 +105,24 @@ const agencies = [
     hours: 'Lun-Ven: 7h-18h, Sam: 7h-13h'
   }
 ]
+
+const FishIcon = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+  </svg>
+)
+
+const ShellfishIcon = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+  </svg>
+)
+
+const ThermometerIcon = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m0 0v.01M12 3a3 3 0 00-3 3v8.268a5.5 5.5 0 106 0V6a3 3 0 00-3-3z" />
+  </svg>
+)
 
 function Home() {
   const sectionsRef = useRef<HTMLDivElement>(null)
@@ -126,6 +145,19 @@ function Home() {
     return () => observer.disconnect()
   }, [])
 
+  const renderProductIcon = (iconType: string) => {
+    switch (iconType) {
+      case 'fish':
+        return <FishIcon className="heroicon" />
+      case 'shellfish':
+        return <ShellfishIcon className="heroicon" />
+      case 'equipment':
+        return <Cog6ToothIcon className="heroicon" />
+      default:
+        return <CubeIcon className="heroicon" />
+    }
+  }
+
   return (
     <div ref={sectionsRef}>
       <Hero />
@@ -147,14 +179,14 @@ function Home() {
                   <div className="product-image">
                     <img src={product.image} alt={product.title} />
                     <div className="product-icon-badge">
-                      <i className={`bx ${product.icon}`}></i>
+                      {renderProductIcon(product.iconType)}
                     </div>
                   </div>
                   <div className="product-content">
                     <h3>{product.title}</h3>
                     <p>{product.description}</p>
                     <Link to={product.link} className="btn-learn-more">
-                      <i className='bx bx-right-arrow-alt'></i> En savoir plus
+                      <ArrowRightIcon className="heroicon" /> En savoir plus
                     </Link>
                   </div>
                 </div>
@@ -170,21 +202,21 @@ function Home() {
           <div className="services-grid">
             <div className="service-card fade-in">
               <div className="service-icon">
-                <i className='bx bxs-truck'></i>
+                <TruckIcon className="heroicon" />
               </div>
               <h4>Logistique</h4>
               <p>Transport spécialisé et sécurisé pour produits frais</p>
             </div>
             <div className="service-card fade-in">
               <div className="service-icon">
-                <i className='bx bxs-package'></i>
+                <CubeIcon className="heroicon" />
               </div>
               <h4>Conditionnement</h4>
               <p>Emballage professionnel respectant la chaîne du froid</p>
             </div>
             <div className="service-card fade-in">
               <div className="service-icon">
-                <i className='bx bxs-time'></i>
+                <ClockIcon className="heroicon" />
               </div>
               <h4>Livraison</h4>
               <p>Livraison sous température contrôlée dans les délais</p>
@@ -296,28 +328,28 @@ function Home() {
           <div className="certifications-grid">
             <div className="certification-card fade-in">
               <div className="certification-icon">
-                <i className='bx bx-check-shield'></i>
+                <ShieldCheckIcon className="heroicon" />
               </div>
               <h4>Qualité Certifiée</h4>
               <p>Produits conformes aux normes sanitaires internationales</p>
             </div>
             <div className="certification-card fade-in">
               <div className="certification-icon">
-                <i className='bx bxs-thermometer'></i>
+                <ThermometerIcon className="heroicon" />
               </div>
               <h4>Chaîne du Froid</h4>
               <p>Respect strict de la chaîne du froid de A à Z</p>
             </div>
             <div className="certification-card fade-in">
               <div className="certification-icon">
-                <i className='bx bx-world'></i>
+                <GlobeAltIcon className="heroicon" />
               </div>
               <h4>Pêche Durable</h4>
               <p>Pratiques respectueuses de l'environnement marin</p>
             </div>
             <div className="certification-card fade-in">
               <div className="certification-icon">
-                <i className='bx bx-list-check'></i>
+                <ClipboardDocumentCheckIcon className="heroicon" />
               </div>
               <h4>Traçabilité</h4>
               <p>Suivi complet de l'origine à la livraison</p>
@@ -333,7 +365,7 @@ function Home() {
           <h2>Prêt à collaborer avec nous ?</h2>
           <p>Contactez notre équipe pour vos projets d'aquaculture et vos besoins en produits aquatiques</p>
           <Link to="/contact" className="btn btn-secondary">
-            <i className='bx bx-envelope'></i> Nous contacter
+            <EnvelopeIcon className="heroicon" /> Nous contacter
           </Link>
         </div>
       </section>

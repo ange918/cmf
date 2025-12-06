@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { InformationCircleIcon } from '@heroicons/react/24/outline'
 
 function AboutSection() {
     const sectionRef = useRef<HTMLElement>(null)
@@ -65,7 +66,7 @@ function AboutSection() {
                             </div>
                         </div>
                         <Link to="/about" className="btn btn-primary about-btn">
-                            <i className="bx bx-info-circle"></i> En savoir plus
+                            <InformationCircleIcon className="heroicon" /> En savoir plus
                         </Link>
                     </div>
                 </div>

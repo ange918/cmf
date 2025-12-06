@@ -18,7 +18,7 @@ function Footer() {
       <div className="container">
         <div className="footer-hq-info">
           <div className="hq-badge">
-            <BuildingOffice2Icon className="hero-icon" />
+            <BuildingOffice2Icon className="heroicon" />
             <span className="flag-emoji">🇫🇷</span>
             <span>Siège Social basé en France</span>
           </div>
@@ -51,14 +51,14 @@ function Footer() {
           <div className="footer-column">
             <h4>Navigation</h4>
             <ul className="footer-links">
-              <li><Link to="/"><HomeIcon className="hero-icon" /> Accueil</Link></li>
-              <li><Link to="/about"><InformationCircleIcon className="hero-icon" /> À propos</Link></li>
-              <li><Link to="/products"><CubeIcon className="hero-icon" /> Produits</Link></li>
-              <li><Link to="/agencies"><MapPinIcon className="hero-icon" /> Agences</Link></li>
-              <li><Link to="/contact"><EnvelopeIcon className="hero-icon" /> Contact</Link></li>
+              <li><Link to="/"><HomeIcon className="heroicon" /> Accueil</Link></li>
+              <li><Link to="/about"><InformationCircleIcon className="heroicon" /> À propos</Link></li>
+              <li><Link to="/products"><CubeIcon className="heroicon" /> Produits</Link></li>
+              <li><Link to="/agencies"><MapPinIcon className="heroicon" /> Agences</Link></li>
+              <li><Link to="/contact"><EnvelopeIcon className="heroicon" /> Contact</Link></li>
               <li>
                 <Link to="/documentation">
-                  <DocumentTextIcon className="hero-icon" /> Documentation
+                  <DocumentTextIcon className="heroicon" /> Documentation
                 </Link>
               </li>
             </ul>
@@ -76,9 +76,9 @@ function Footer() {
           <div className="footer-column">
             <h4>Contact</h4>
             <ul className="footer-links">
-              <li><EnvelopeIcon className="hero-icon" /> contact@comatra-fm.com</li>
-              <li><PhoneIcon className="hero-icon" /> +229 XX XX XX XX</li>
-              <li><MapPinIcon className="hero-icon" /> Zone Portuaire de Cotonou</li>
+              <li><EnvelopeIcon className="heroicon" /> contact@comatra-fm.com</li>
+              <li><PhoneIcon className="heroicon" /> +229 XX XX XX XX</li>
+              <li><MapPinIcon className="heroicon" /> Zone Portuaire de Cotonou</li>
             </ul>
           </div>
         </div>

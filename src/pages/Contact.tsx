@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { EnvelopeIcon, UserIcon, PhoneIcon, CubeIcon, ChatBubbleLeftRightIcon, PaperAirplaneIcon, PencilSquareIcon, CheckCircleIcon, IdentificationIcon, ClockIcon, BuildingOffice2Icon, MapPinIcon, CalendarIcon, CalendarDaysIcon } from '@heroicons/react/24/outline'
 
 interface FormErrors {
   name?: string
@@ -98,7 +99,7 @@ function Contact() {
       <div className="page-header-bg" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)' }}>
         <div className="page-header-overlay"></div>
         <div className="container">
-          <h1><i className='bx bx-envelope'></i> Nous Contacter</h1>
+          <h1><EnvelopeIcon className="heroicon header-icon" /> Nous Contacter</h1>
           <p>Prenez contact avec nos équipes pour vos projets</p>
         </div>
       </div>
@@ -107,17 +108,17 @@ function Contact() {
         <div className="container">
           <div className="contact-grid">
             <div className="contact-form-container fade-in">
-              <h3><i className='bx bx-edit'></i> Demande de devis</h3>
+              <h3><PencilSquareIcon className="heroicon" /> Demande de devis</h3>
               
               {submitSuccess && (
                 <div className="success-message">
-                  <i className='bx bx-check-circle'></i> Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+                  <CheckCircleIcon className="heroicon" /> Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
                 </div>
               )}
 
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <label htmlFor="name"><i className='bx bx-user'></i> Nom complet *</label>
+                  <label htmlFor="name"><UserIcon className="heroicon" /> Nom complet *</label>
                   <input
                     type="text"
                     id="name"
@@ -131,7 +132,7 @@ function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="email"><i className='bx bx-envelope'></i> Email *</label>
+                  <label htmlFor="email"><EnvelopeIcon className="heroicon" /> Email *</label>
                   <input
                     type="email"
                     id="email"
@@ -145,7 +146,7 @@ function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="phone"><i className='bx bx-phone'></i> Téléphone</label>
+                  <label htmlFor="phone"><PhoneIcon className="heroicon" /> Téléphone</label>
                   <input
                     type="tel"
                     id="phone"
@@ -159,7 +160,7 @@ function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="productType"><i className='bx bx-package'></i> Type de produit</label>
+                  <label htmlFor="productType"><CubeIcon className="heroicon" /> Type de produit</label>
                   <select
                     id="productType"
                     name="productType"
@@ -176,7 +177,7 @@ function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="message"><i className='bx bx-message-detail'></i> Message *</label>
+                  <label htmlFor="message"><ChatBubbleLeftRightIcon className="heroicon" /> Message *</label>
                   <textarea
                     id="message"
                     name="message"
@@ -195,17 +196,17 @@ function Contact() {
                   disabled={isSubmitting}
                   style={{ width: '100%' }}
                 >
-                  <i className='bx bx-send'></i> {isSubmitting ? 'Envoi en cours...' : 'Envoyer la demande'}
+                  <PaperAirplaneIcon className="heroicon" /> {isSubmitting ? 'Envoi en cours...' : 'Envoyer la demande'}
                 </button>
               </form>
             </div>
 
             <div className="contact-info-container">
               <div className="contact-info-card fade-in">
-                <h4><i className='bx bx-id-card'></i> Coordonnées</h4>
+                <h4><IdentificationIcon className="heroicon" /> Coordonnées</h4>
                 <div className="contact-info-item">
                   <span className="contact-icon">
-                    <i className='bx bx-phone'></i>
+                    <PhoneIcon className="heroicon" />
                   </span>
                   <div>
                     <p><strong>Téléphone</strong></p>
@@ -216,7 +217,7 @@ function Contact() {
                 </div>
                 <div className="contact-info-item">
                   <span className="contact-icon">
-                    <i className='bx bx-envelope'></i>
+                    <EnvelopeIcon className="heroicon" />
                   </span>
                   <div>
                     <p><strong>Email</strong></p>
@@ -236,28 +237,28 @@ function Contact() {
               </div>
 
               <div className="contact-info-card fade-in">
-                <h4><i className='bx bx-time'></i> Horaires d'ouverture</h4>
+                <h4><ClockIcon className="heroicon" /> Horaires d'ouverture</h4>
                 <ul className="hours-list">
                   <li>
-                    <span><i className='bx bx-calendar'></i> Lundi - Vendredi</span>
+                    <span><CalendarDaysIcon className="heroicon" /> Lundi - Vendredi</span>
                     <span>7h00 - 18h00</span>
                   </li>
                   <li>
-                    <span><i className='bx bx-calendar'></i> Samedi</span>
+                    <span><CalendarDaysIcon className="heroicon" /> Samedi</span>
                     <span>7h00 - 13h00</span>
                   </li>
                   <li>
-                    <span><i className='bx bx-calendar-x'></i> Dimanche</span>
+                    <span><CalendarIcon className="heroicon" /> Dimanche</span>
                     <span>Fermé</span>
                   </li>
                 </ul>
               </div>
 
               <div className="contact-info-card fade-in">
-                <h4><i className='bx bx-buildings'></i> Adresse principale</h4>
+                <h4><BuildingOffice2Icon className="heroicon" /> Adresse principale</h4>
                 <div className="contact-info-item">
                   <span className="contact-icon">
-                    <i className='bx bx-map'></i>
+                    <MapPinIcon className="heroicon" />
                   </span>
                   <div>
                     <p><strong>Siège Bénin</strong></p>
