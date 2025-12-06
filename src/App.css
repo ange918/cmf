@@ -2466,6 +2466,23 @@ main {
   display: block;
 }
 
+.product-category-badge {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--white);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.all-products-section {
+  background: var(--gray-light);
+}
+
 .alternating-product-content p {
   font-size: 1.05rem;
   color: var(--gray-dark);

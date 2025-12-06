@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Hero from '../components/Hero'
 import AboutSection from '../components/AboutSection'
@@ -6,36 +6,61 @@ import VideoSection from '../components/VideoSection'
 import Partners from '../components/Partners'
 import AgencyCard from '../components/AgencyCard'
 
-const galleryImages = [
+const allProducts = [
   {
-    src: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    alt: 'Poissons frais du marché',
-    caption: 'Poissons frais de qualité premium'
+    name: 'Dorade royale',
+    scientificName: 'Sparus aurata',
+    image: 'dorade.jpg',
+    description: 'Poisson noble méditerranéen à la chair fine et délicate. Idéal pour les grillades et cuissons au four.',
+    category: 'Poissons Marins'
   },
   {
-    src: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    alt: 'Pêche en mer',
-    caption: 'Pêche responsable en haute mer'
+    name: 'Crevette géante tigrée',
+    scientificName: 'Penaeus monodon',
+    image: 'gamba.jpeg',
+    description: 'La reine des crevettes, avec sa chair ferme et sucrée. Parfaite pour les grillades et les plats gastronomiques.',
+    category: 'Crustacés'
   },
   {
-    src: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    alt: 'Banc de poissons',
-    caption: 'Diversité marine exceptionnelle'
+    name: 'Tilapia (souche améliorée)',
+    scientificName: 'Oreochromis niloticus',
+    image: 'tilapia.jpg',
+    description: 'Élevé dans nos installations aquacoles certifiées, ce tilapia du Nil offre une qualité supérieure.',
+    category: 'Poissons d\'Eau Douce'
   },
   {
-    src: 'https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    alt: 'Crevettes fraîches',
-    caption: 'Crustacés de première fraîcheur'
+    name: 'Homard',
+    scientificName: 'Homarus',
+    image: 'homard.jpg',
+    description: 'Le roi des crustacés, chair fine et goût exceptionnel pour les repas d\'exception.',
+    category: 'Crustacés'
   },
   {
-    src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    alt: 'Installation aquacole',
-    caption: 'Installations aquacoles modernes'
+    name: 'Mérou',
+    scientificName: 'Epinephelus aeneus',
+    image: 'merou.jpg',
+    description: 'Poisson massif à la chair blanche et ferme, parfait pour les plats en sauce.',
+    category: 'Poissons Marins'
   },
   {
-    src: 'https://images.unsplash.com/photo-1534043464124-3be32fe000c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    alt: 'Filets de poisson',
-    caption: 'Filets préparés avec soin'
+    name: 'Langoustine',
+    scientificName: 'Nephrops norvegicus',
+    image: 'langoustine.jpg',
+    description: 'Délicate et raffinée, la langoustine est un produit de luxe pour les grandes occasions.',
+    category: 'Crustacés'
+  },
+  {
+    name: 'Cages flottantes',
+    image: '/structure.jpeg',
+    description: 'Cages marines robustes pour l\'élevage en mer, résistantes aux conditions météorologiques extrêmes.',
+    category: 'Équipement Aquacole'
+  },
+  {
+    name: 'Huître',
+    scientificName: 'Ostreidae',
+    image: 'huitres.jpg',
+    description: 'Huîtres fraîches de qualité supérieure, élevées dans nos parcs ostréicoles.',
+    category: 'Crustacés'
   }
 ]
 
@@ -82,25 +107,6 @@ const agencies = [
 
 function Home() {
   const sectionsRef = useRef<HTMLDivElement>(null)
-  const [lightboxOpen, setLightboxOpen] = useState(false)
-  const [currentImage, setCurrentImage] = useState(0)
-
-  const openLightbox = (index: number) => {
-    setCurrentImage(index)
-    setLightboxOpen(true)
-  }
-
-  const closeLightbox = () => {
-    setLightboxOpen(false)
-  }
-
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % galleryImages.length)
-  }
-
-  const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
-  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -187,53 +193,33 @@ function Home() {
         </div>
       </section>
 
-      <section className="gallery-section section">
+      <section className="all-products-section section">
         <div className="container">
-          <h2 className="section-title">Notre Galerie</h2>
+          <h2 className="section-title">Nos Produits</h2>
           <p className="section-subtitle">
-            Découvrez nos produits et nos installations en images
+            Découvrez notre sélection complète de produits de qualité premium
           </p>
-          <div className="gallery-grid">
-            {galleryImages.map((image, index) => (
-              <div 
-                key={index} 
-                className="gallery-item fade-in"
-                onClick={() => openLightbox(index)}
-              >
-                <img src={image.src} alt={image.alt} />
-                <div className="gallery-overlay">
-                  <i className='bx bx-zoom-in'></i>
-                  <span>{image.caption}</span>
+          <div className="alternating-products">
+            {allProducts.map((product, index) => (
+              <div
+                key={index}
+                className={`alternating-product-card fade-in ${index % 2 === 1 ? 'reversed' : ''}`}>
+                <div className="alternating-product-image">
+                  <img src={product.image} alt={product.name} />
+                </div>
+                <div className="alternating-product-content">
+                  <span className="product-category-badge">{product.category}</span>
+                  <h3>{product.name}</h3>
+                  {product.scientificName && (
+                    <span className="scientific-name">{product.scientificName}</span>
+                  )}
+                  <p>{product.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {lightboxOpen && (
-        <div className="lightbox" onClick={closeLightbox}>
-          <button className="lightbox-close" onClick={closeLightbox}>
-            <i className='bx bx-x'></i>
-          </button>
-          <button 
-            className="lightbox-prev" 
-            onClick={(e) => { e.stopPropagation(); prevImage(); }}
-          >
-            <i className='bx bx-chevron-left'></i>
-          </button>
-          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <img src={galleryImages[currentImage].src} alt={galleryImages[currentImage].alt} />
-            <p className="lightbox-caption">{galleryImages[currentImage].caption}</p>
-          </div>
-          <button 
-            className="lightbox-next" 
-            onClick={(e) => { e.stopPropagation(); nextImage(); }}
-          >
-            <i className='bx bx-chevron-right'></i>
-          </button>
-        </div>
-      )}
 
       <section className="agencies-section section">
         <div className="container">
