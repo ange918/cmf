@@ -1,10 +1,23 @@
 import { useEffect, useRef } from 'react'
-import { InformationCircleIcon, StarIcon, LightBulbIcon } from '@heroicons/react/24/outline'
+import {
+    InformationCircleIcon,
+    StarIcon,
+    LightBulbIcon,
+} from '@heroicons/react/24/outline'
 import AnimatedStats from '../components/AnimatedStats'
 
 const GlobeWaveIcon = ({ className }: { className?: string }) => (
-    <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+    <svg
+        className={className}
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor">
+        <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+        />
     </svg>
 )
 
@@ -39,7 +52,8 @@ function About() {
                 <div className="page-header-overlay"></div>
                 <div className="container">
                     <h1>
-                        <InformationCircleIcon className="heroicon header-icon" /> À propos de nous
+                        <InformationCircleIcon className="heroicon header-icon" />{' '}
+                        À propos de nous
                     </h1>
                     <p>Découvrez notre histoire et nos valeurs</p>
                 </div>
@@ -219,12 +233,11 @@ function About() {
                         <div className="team-card fade-in">
                             <div className="team-image">
                                 <img
-                                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+                                    src="direction.jpeg"
                                     alt="Roméo David - Fondateur"
                                 />
                             </div>
                             <div className="team-info">
-                                <h4>Roméo David</h4>
                                 <p className="role">
                                     Fondateur & Directeur Général
                                 </p>
@@ -237,12 +250,11 @@ function About() {
                         <div className="team-card fade-in">
                             <div className="team-image">
                                 <img
-                                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
+                                    src="direction.jpeg"
                                     alt="Marie Akplo - Directrice Commerciale"
                                 />
                             </div>
                             <div className="team-info">
-                                <h4>Marie Akplo</h4>
                                 <p className="role">Directrice Commerciale</p>
                                 <p>
                                     Spécialiste des relations clients et du
@@ -254,16 +266,16 @@ function About() {
                         <div className="team-card fade-in">
                             <div className="team-image">
                                 <img
-                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400"
-                                    alt="Dr. Emmanuel Mensah - Directeur Scientifique"
+                                    src="direction.jpeg"
+                                    alt="Directeur technique"
                                 />
                             </div>
                             <div className="team-info">
-                                <h4>Dr. Emmanuel Mensah</h4>
-                                <p className="role">Directeur Scientifique</p>
+                                <p className="role">Directeur technique</p>
                                 <p>
-                                    Docteur en biologie marine, responsable de
-                                    la R&D et des partenariats scientifiques.
+                                    Directeur technique assurant supervision
+                                    aquacole, optimisant production, qualité,
+                                    durabilité et performance globale.
                                 </p>
                             </div>
                         </div>
