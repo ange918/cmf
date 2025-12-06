@@ -233,7 +233,7 @@ function About() {
                         <div className="team-card fade-in">
                             <div className="team-image">
                                 <img
-                                    src="direction.jpeg"
+                                    src="dm.png"
                                     alt="Roméo David - Fondateur"
                                 />
                             </div>
@@ -250,7 +250,7 @@ function About() {
                         <div className="team-card fade-in">
                             <div className="team-image">
                                 <img
-                                    src="direction.jpeg"
+                                    src="dm.png"
                                     alt="Marie Akplo - Directrice Commerciale"
                                 />
                             </div>
@@ -266,8 +266,8 @@ function About() {
                         <div className="team-card fade-in">
                             <div className="team-image">
                                 <img
-                                    src="direction.jpeg"
-                                    alt="Directeur technique"
+                                    src="dm.png"
+                                    alt="Dr. Emmanuel Mensah - Directeur technique"
                                 />
                             </div>
                             <div className="team-info">

@@ -85,18 +85,18 @@ const allProducts = [
 
 const products = [
     {
-        image: 'poisson.jpg',
-        title: 'Poissons nobles',
+        image: 'elevage.jpg',
+        title: 'Poissons d&#39;élevage',
         description:
             'Maigre, daurade, carangue, tilapia, silures de haute qualité',
-        link: '/poissons-nobles',
+        link: '/Poissons dd&#39;élevage',
         iconType: 'fish',
     },
     {
-        image: 'https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250',
-        title: 'Crustacés & Coquillages',
+        image: 'peche.webp',
+        title: 'Poisson de pêche',
         description: 'Sélection premium de produits de la mer',
-        link: '/crustaces-coquillages',
+        link: '/Poisson de pêche',
         iconType: 'shellfish',
     },
     {
