@@ -89,14 +89,14 @@ const products = [
         title: 'Poissons d&#39;élevage',
         description:
             'Maigre, daurade, carangue, tilapia, silures de haute qualité',
-        link: '/Poissons dd&#39;élevage',
+        link: '/Poissons-nobles',
         iconType: 'fish',
     },
     {
         image: 'peche.webp',
         title: 'Poisson de pêche',
         description: 'Sélection premium de produits de la mer',
-        link: '/Poisson de pêche',
+        link: '/crustaces-coquillages',
         iconType: 'shellfish',
     },
     {

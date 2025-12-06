@@ -45,7 +45,7 @@ const mainProducts = [
         title: "Poissons d'élevage",
         description:
             'Dorade, Bar, Tilapia, Mérou, Vivaneau, Maigre, Sériole, Saumon et Thon de qualité premium.',
-        link: '/poissons d&#39;élevage',
+        link: '/poissons-nobles',
         iconType: 'fish',
     },
     {

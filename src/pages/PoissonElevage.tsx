@@ -209,7 +209,7 @@ const crustacéeEauDouce = [
     },
 ]
 
-function PoissonsNobles() {
+function PoissonsElevage() {
     const pageRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
@@ -439,4 +439,4 @@ function PoissonsNobles() {
     )
 }
 
-export default PoissonsNobles
+export default PoissonsElevage

@@ -7,7 +7,7 @@ import About from './pages/About'
 import Products from './pages/Products'
 import Agencies from './pages/Agencies'
 import Contact from './pages/Contact'
-import PoissonsNobles from './pages/PoissonElevage'
+import PoissonsElevage from './pages/PoissonElevage'
 import CrustacesCoquillages from './pages/CrustacesCoquillages'
 import EquipementAquacole from './pages/EquipementAquacole'
 import Documentation from './pages/Documentation'
@@ -27,7 +27,7 @@ function App() {
                     <Route path="/contact" element={<Contact />} />
                     <Route
                         path="/poissons-nobles"
-                        element={<PoissonsNobles />}
+                        element={<PoissonsElevage />}
                     />
                     <Route
                         path="/crustaces-coquillages"
