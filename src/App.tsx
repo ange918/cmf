@@ -10,6 +10,7 @@ import Contact from './pages/Contact'
 import PoissonsNobles from './pages/PoissonsNobles'
 import CrustacesCoquillages from './pages/CrustacesCoquillages'
 import EquipementAquacole from './pages/EquipementAquacole'
+import Documentation from './pages/Documentation'
 import './App.css'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/poissons-nobles" element={<PoissonsNobles />} />
           <Route path="/crustaces-coquillages" element={<CrustacesCoquillages />} />
           <Route path="/equipement-aquacole" element={<EquipementAquacole />} />
+          <Route path="/documentation" element={<Documentation />} />
         </Routes>
       </main>
       <Footer />
