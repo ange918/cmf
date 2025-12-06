@@ -1,68 +1,71 @@
 import { useEffect, useRef } from 'react'
 
-const crustaces = [
+const crustacesMarins = [
     {
-        name: 'Crevette',
+        name: 'Crevette à pattes blanches',
+        scientificName: 'Litopenaeus vannamei',
         image: 'crevettes.jpg',
         description:
-            "Crevettes fraîches d'élevage responsable, parfaites pour toutes vos préparations.",
+            "Crevette d'élevage de qualité supérieure, très populaire pour sa chair tendre et son goût délicat. Idéale pour toutes les préparations culinaires.",
     },
     {
-        name: 'Gambas',
+        name: 'Crevette géante tigrée',
+        scientificName: 'Penaeus monodon',
         image: 'gamba.jpeg',
         description:
-            'Grosses crevettes sauvages, chair ferme et sucrée, idéales grillées.',
+            "La reine des crevettes, avec sa chair ferme et sucrée. Parfaite pour les grillades et les plats gastronomiques. Sa taille impressionnante en fait un produit premium.",
     },
     {
         name: 'Langoustine',
+        scientificName: 'Nephrops norvegicus',
         image: 'langoustine.jpg',
         description:
-            'Délicate et raffinée, la langoustine est un produit de luxe pour les grandes occasions.',
+            'Délicate et raffinée, la langoustine est un produit de luxe pour les grandes occasions. Sa chair fine et savoureuse est très prisée des gastronomes.',
     },
     {
         name: 'Crabe',
+        scientificName: 'Brachyura',
         image: 'crabe.jpg',
         description:
-            'Chair délicate et savoureuse, le crabe est un incontournable des plateaux de fruits de mer.',
+            'Chair délicate et savoureuse, le crabe est un incontournable des plateaux de fruits de mer. Disponible en plusieurs variétés selon la saison.',
     },
     {
         name: 'Homard',
+        scientificName: 'Homarus',
         image: 'homard.jpg',
         description:
-            "Le roi des crustacés, chair fine et goût exceptionnel pour les repas d'exception.",
+            "Le roi des crustacés, chair fine et goût exceptionnel pour les repas d'exception. Un produit noble qui sublime toutes les préparations.",
     },
-]
-
-const coquillages = [
+    {
+        name: 'Gambas',
+        scientificName: 'Penaeus kerathurus',
+        image: 'gamba.jpeg',
+        description:
+            'Grosses crevettes sauvages à la chair ferme et sucrée, idéales grillées. Très appréciées pour leur taille généreuse et leur saveur intense.',
+    },
     {
         name: 'Huître',
+        scientificName: 'Ostreidae',
         image: 'huitres.jpg',
         description:
-            'Huîtres fraîches de qualité supérieure, idéales nature ou gratinées.',
+            "Huîtres fraîches de qualité supérieure, élevées dans nos parcs ostréicoles. Idéales nature ou gratinées, elles apportent une touche d'élégance à vos tables.",
     },
     {
         name: 'Moule',
+        scientificName: 'Mytilidae',
         image: 'moule.jpg',
         description:
-            'Moules charnues et savoureuses, parfaites pour les marinières et gratins.',
+            "Moules charnues et savoureuses issues de nos installations aquacoles. Parfaites pour les marinières, gratins et autres recettes traditionnelles.",
     },
+]
+
+const crustacesEauDouce = [
     {
-        name: 'Palourde',
-        image: 'palourdes.webp',
+        name: 'Crevette géante d\'eau douce',
+        scientificName: 'Macrobrachium rosenbergii',
+        image: 'langoustine.jpg',
         description:
-            'Petit coquillage fin, excellent pour les pâtes aux fruits de mer.',
-    },
-    {
-        name: 'Coquille Saint-Jacques',
-        image: 'coquille_saint_jacques.webp',
-        description:
-            "La noix de Saint-Jacques, produit d'exception à la saveur délicate et sucrée.",
-    },
-    {
-        name: 'Couteau de mer',
-        image: 'couteau_de_mer.jpg',
-        description:
-            'Coquillage allongé à la chair ferme, délicieux grillé au beurre persillé.',
+            "Aussi appelée chevrette ou écrevisse géante, cette crevette d'eau douce offre une chair généreuse et savoureuse. Élevée dans nos bassins d'eau douce, elle représente une excellente alternative aux crevettes marines.",
     },
 ]
 
@@ -98,37 +101,40 @@ function CrustacesCoquillages() {
                 <div className="page-header-overlay"></div>
                 <div className="container">
                     <h1>
-                        <i className="bx bxs-droplet"></i> Crustacés &
-                        Coquillages
+                        <i className="bx bxs-droplet"></i> Crustacés
                     </h1>
-                    <p>Les trésors de la mer, sélectionnés avec soin</p>
+                    <p>Les trésors de la mer et d'eau douce, sélectionnés avec soin</p>
                 </div>
             </div>
 
             <section className="product-detail-section section">
                 <div className="container">
-                    <h2 className="section-title">
-                        <i
-                            className="bx bx-water"
-                            style={{ marginRight: '10px' }}></i>
-                        Crustacés
-                    </h2>
-                    <p className="section-subtitle">
-                        Notre sélection de crustacés frais, pêchés de manière
-                        responsable et livrés dans le respect strict de la
-                        chaîne du froid.
+                    <p className="section-intro">
+                        Découvrez notre sélection de crustacés d'exception, issus de nos fermes aquacoles 
+                        ou pêchés de manière responsable. Chaque produit est sélectionné pour sa fraîcheur 
+                        et ses qualités gustatives incomparables.
                     </p>
 
-                    <div className="product-detail-grid">
-                        {crustaces.map((item, index) => (
+                    <h2 className="section-title">
+                        <i className="bx bx-water" style={{ marginRight: '10px' }}></i>
+                        Crustacés d'Eau de Mer
+                    </h2>
+                    <p className="section-subtitle">
+                        Notre sélection de crustacés marins, élevés et pêchés selon les standards 
+                        les plus stricts de qualité et de durabilité.
+                    </p>
+
+                    <div className="alternating-products">
+                        {crustacesMarins.map((item, index) => (
                             <div
                                 key={index}
-                                className="product-detail-card fade-in">
-                                <div className="product-detail-image">
+                                className={`alternating-product-card fade-in ${index % 2 === 1 ? 'reversed' : ''}`}>
+                                <div className="alternating-product-image">
                                     <img src={item.image} alt={item.name} />
                                 </div>
-                                <div className="product-detail-content">
+                                <div className="alternating-product-content">
                                     <h3>{item.name}</h3>
+                                    <span className="scientific-name">{item.scientificName}</span>
                                     <p>{item.description}</p>
                                 </div>
                             </div>
@@ -142,26 +148,24 @@ function CrustacesCoquillages() {
                 style={{ background: 'var(--gray-light)' }}>
                 <div className="container">
                     <h2 className="section-title">
-                        <i
-                            className="bx bxs-droplet-half"
-                            style={{ marginRight: '10px' }}></i>
-                        Coquillages
+                        <i className="bx bxs-droplet-half" style={{ marginRight: '10px' }}></i>
+                        Crustacés d'Eau Douce
                     </h2>
                     <p className="section-subtitle">
-                        Des coquillages d\'une fraîcheur incomparable pour
-                        sublimer vos plats et régaler vos convives.
+                        Nos crustacés d'eau douce, élevés dans nos bassins modernes pour une qualité optimale.
                     </p>
 
-                    <div className="product-detail-grid">
-                        {coquillages.map((item, index) => (
+                    <div className="alternating-products">
+                        {crustacesEauDouce.map((item, index) => (
                             <div
                                 key={index}
-                                className="product-detail-card fade-in">
-                                <div className="product-detail-image">
+                                className={`alternating-product-card fade-in ${index % 2 === 1 ? 'reversed' : ''}`}>
+                                <div className="alternating-product-image">
                                     <img src={item.image} alt={item.name} />
                                 </div>
-                                <div className="product-detail-content">
+                                <div className="alternating-product-content">
                                     <h3>{item.name}</h3>
+                                    <span className="scientific-name">{item.scientificName}</span>
                                     <p>{item.description}</p>
                                 </div>
                             </div>
@@ -172,7 +176,7 @@ function CrustacesCoquillages() {
 
             <section className="product-cta section">
                 <div className="container">
-                    <h2>Besoin de crustacés ou coquillages ?</h2>
+                    <h2>Besoin de crustacés de qualité ?</h2>
                     <p>
                         Notre équipe est à votre disposition pour répondre à
                         toutes vos demandes.
