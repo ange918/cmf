@@ -2485,33 +2485,35 @@ main {
 
 @media (max-width: 992px) {
   .alternating-product-card {
-    flex-direction: column !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     min-height: auto;
+    gap: 0;
+  }
+
+  .alternating-product-card.reversed {
+    flex-direction: row;
+  }
+
+  .alternating-product-card.reversed .alternating-product-image {
+    order: 2;
+  }
+
+  .alternating-product-card.reversed .alternating-product-content {
+    order: 1;
   }
 
   .alternating-product-image {
     flex: none;
-    height: 250px;
-    min-height: 250px;
+    height: 100%;
+    min-height: 220px;
   }
 
   .alternating-product-content {
-    padding: 30px;
-  }
-
-  .alternating-product-content h3 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .alternating-product-image {
-    height: 200px;
-    min-height: 200px;
-  }
-
-  .alternating-product-content {
-    padding: 25px 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .alternating-product-content h3 {
@@ -2520,5 +2522,35 @@ main {
 
   .alternating-product-content p {
     font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 576px) {
+  .alternating-product-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .alternating-product-image {
+    min-height: 180px;
+  }
+
+  .alternating-product-content {
+    padding: 15px;
+  }
+
+  .alternating-product-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+
+  .alternating-product-content .scientific-name {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  .alternating-product-content p {
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 }
