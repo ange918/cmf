@@ -7,6 +7,7 @@ import {
     ClockIcon,
     EnvelopeIcon,
     Cog6ToothIcon,
+    ArrowsRightLeftIcon,
 } from '@heroicons/react/24/outline'
 
 const FishIcon = ({ className }: { className?: string }) => (
@@ -57,6 +58,14 @@ const mainProducts = [
         iconType: 'shellfish',
     },
     {
+        image: 'bateau.jpg',
+        title: 'Import & Export',
+        description:
+            'Notre Direction France assure l\'import et l\'export des produits de mer frais, surgelés et conserves.',
+        link: '/import-export',
+        iconType: 'import-export',
+    },
+    {
         image: 'aquacole.jpg',
         title: 'Équipement aquacole',
         description:
@@ -95,6 +104,8 @@ function Products() {
                 return <ShellfishIcon className="heroicon" />
             case 'equipment':
                 return <Cog6ToothIcon className="heroicon" />
+            case 'import-export':
+                return <ArrowsRightLeftIcon className="heroicon" />
             default:
                 return <CubeIcon className="heroicon" />
         }

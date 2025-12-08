@@ -10,6 +10,7 @@ import Contact from './pages/Contact'
 import PoissonsElevage from './pages/PoissonElevage'
 import CrustacesCoquillages from './pages/CrustacesCoquillages'
 import EquipementAquacole from './pages/EquipementAquacole'
+import ImportExport from './pages/ImportExport'
 import Documentation from './pages/Documentation'
 import './App.css'
 
@@ -36,6 +37,10 @@ function App() {
                     <Route
                         path="/equipement-aquacole"
                         element={<EquipementAquacole />}
+                    />
+                    <Route
+                        path="/import-export"
+                        element={<ImportExport />}
                     />
                     <Route path="/documentation" element={<Documentation />} />
                 </Routes>

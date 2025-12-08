@@ -2818,3 +2818,118 @@ main {
     width: 3rem;
     height: 3rem;
 }
+
+/* Import Export Page Styles */
+.products-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.category-card {
+    background: var(--white);
+    padding: 35px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.category-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.category-card p {
+    color: var(--gray);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.category-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-items li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: var(--gray-dark);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.category-items li:last-child {
+    border-bottom: none;
+}
+
+.category-items li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--primary-light);
+    border-radius: 50%;
+}
+
+.coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.coverage-card {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
+    padding: 40px;
+    border-radius: 20px;
+    color: var(--white);
+    text-align: center;
+}
+
+.coverage-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.coverage-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+@media (max-width: 992px) {
+    .products-categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .coverage-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .coverage-card {
+        padding: 30px;
+    }
+    
+    .coverage-card h3 {
+        font-size: 1.5rem;
+    }
+}
