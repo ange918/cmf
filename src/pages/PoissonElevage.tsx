@@ -107,48 +107,27 @@ const poissonsMarins = [
         description:
             "Poisson d'élevage marin de qualité premium, chair blanche et délicate. Riche en oméga-3 et apprécié pour sa polyvalence culinaire.",
     },
-    {
-        name: '  Tilapia souche améliorer',
-        scientificName: 'oreochromis mossambicus',
-        image: 'tilapia.jpg',
-        description:
-            'Poisson nutritif, chair tendre, goût délicieux, idéal recettes variées.',
-    },
-    {
-        name: '  Tilapia souche améliorer',
-        scientificName: 'oreochromis aureus',
-        image: 'aureus.webp',
-        description:
-            'Chair savoureuse et ferme, parfait pour cuisson grillée ou vapeur.',
-    },
-    {
-        name: '  Tilapia souche améliorer',
-        scientificName: 'scianenops occellarus',
-        image: 'saumon.jpg',
-        description:
-            'Poisson de qualité, chair douce et délicate, très apprécié gourmets.',
-    },
 ]
 
 const poissonsEauDouce = [
     {
         name: 'clarias',
         scientificName: 'nigrodigitatus',
-        image: 'tilapia.jpg',
+        image: 'nigrogitatus.jpg',
         description:
             'Poisson robuste, chair ferme, goût délicieux, parfait plats gourmands.',
     },
     {
         name: ' clarias',
         scientificName: 'gariepinus',
-        image: 'tilapia.jpg',
+        image: 'gariepinus.jpg',
         description:
             'Chair savoureuse et dense, poisson idéal pour cuisine familiale raffinée.',
     },
     {
         name: 'clarias ',
         scientificName: 'hétérobranchus longifilis',
-        image: 'tilapia.jpg',
+        image: 'longifilis.jpg',
         description:
             'Poisson de grande taille, chair ferme et savoureuse, cuisine variée.',
     },
@@ -179,7 +158,7 @@ const poissonsEauDouceEtDeMer = [
     {
         name: '  Tilapia souche améliorer',
         scientificName: 'scianenops occellarus',
-        image: 'saumon.jpg',
+        image: 'occellarus.jpeg',
         description:
             'Poisson de qualité, chair douce et délicate, très apprécié gourmets.',
     },
@@ -189,21 +168,21 @@ const crustacéeEauDeMer = [
     {
         name: 'crevettes à 5 pattes blanches',
         scientificName: 'litopenaeus vannamei',
-        image: 'poisson.jpg',
+        image: 'litopenaeus.jpg',
         description:
             'Crevette premium, chair blanche et ferme, très recherchée pour exportation et marchés.',
     },
     {
         name: 'crevettes ',
         scientificName: 'penaeus vannamei',
-        image: 'poisson.jpg',
+        image: 'penaeus.jpeg',
         description:
             'Crevette tropicale de qualité, idéale pour la consommation fraîche ou surgelée.',
     },
     {
         name: 'crevette géante tigrée',
         scientificName: 'penaeus mondone',
-        image: 'crevette-géant.jpg',
+        image: 'tigré.jpeg',
         description:
             'Crevette de grande taille, chair ferme et savoureuse, parfaite pour restaurants et export.',
     },
@@ -227,7 +206,7 @@ const crustacéeEauDouce = [
     {
         name: 'Crevette',
         scientificName: 'macrobrachium rosenbergii ',
-        image: 'poisson.jpg',
+        image: 'macrobrachium.jpeg',
         description:
             'Crevette d’eau douce de qualité, chair ferme et goûtée, très demandée sur le marché local.',
     },
