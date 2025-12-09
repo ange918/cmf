@@ -19,15 +19,15 @@ const allAgencies = [
     {
         image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300',
         title: 'Siège Administratif - France',
-        address: "Paris, France - Centre d'affaires",
-        phone: '+33 X XX XX XX XX',
+        address: '71/73 Avenue Des Ternes 75017 Paris France',
+        phone: ': +33 6 03 18 15 00',
         hours: 'Lun-Ven: 9h-17h',
     },
 
     {
         image: 'https://images.unsplash.com/photo-1590846083693-f23fdede3a7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300',
         title: "Abidjan, Côte d'Ivoire",
-        address: 'Zone Industrielle de Vridi, Boulevard VGE',
+        address: '11 BPM 2536 ABIDJAN 11 CEDEX',
         phone: '+225 XX XX XX XX',
         hours: 'Lun-Ven: 7h-18h, Sam: 7h-13h',
     },

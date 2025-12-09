@@ -110,17 +110,17 @@ const products = [
 
 const agencies = [
     {
-        image: 'https://images.unsplash.com/photo-1549144511-f099e773c147?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300',
-        title: 'Cotonou, Bénin',
-        address: 'Zone Portuaire de Cotonou, Avenue Jean-Paul II',
-        phone: '+229 XX XX XX XX',
-        hours: 'Lun-Ven: 7h-18h, Sam: 7h-13h',
+        image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300',
+        title: 'Siège Administratif - France',
+        address: '71/73 Avenue Des Ternes 75017 Paris France',
+        phone: ': +33 6 03 18 15 00',
+        hours: 'Lun-Ven: 9h-17h',
     },
     {
-        image: 'https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300',
-        title: 'Lomé, Togo',
-        address: 'Port Autonome de Lomé, Avenue du 24 janvier',
-        phone: '+228 XX XX XX XX',
+        image: 'https://images.unsplash.com/photo-1590846083693-f23fdede3a7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300',
+        title: 'Abidjan, Côte dIvoire',
+        address: '11 BPM 2536 ABIDJAN 11 CEDEX',
+        phone: '+225 XX XX XX XX',
         hours: 'Lun-Ven: 7h-18h, Sam: 7h-13h',
     },
 ]
@@ -331,8 +331,8 @@ function Home() {
                 <div className="container">
                     <h2 className="section-title">Nos agences</h2>
                     <p className="section-subtitle">
-                        Présents en France et dans 3 pays d'Afrique de l'Ouest
-                        pour vous servir au plus près
+                        Présents en France et en Afrique de l'Ouest pour vous
+                        servir au plus près
                     </p>
                     <div className="agencies-grid">
                         {agencies.map((agency, index) => (

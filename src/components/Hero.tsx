@@ -45,7 +45,7 @@ function Hero() {
                         <MapPinIcon className="heroicon" />
                     </div>
                     <div className="highlight-content">
-                        <h4>4 Agences</h4>
+                        <h4>2 Agences</h4>
                         <p>France & Afrique de l'Ouest</p>
                     </div>
                 </div>

@@ -207,7 +207,7 @@ function Contact() {
                                         value={formData.phone}
                                         onChange={handleChange}
                                         className={errors.phone ? 'error' : ''}
-                                        placeholder="+229 XX XX XX XX"
+                                        placeholder="+225 XX XX XX XX"
                                     />
                                     {errors.phone && (
                                         <span className="error-message">
@@ -313,13 +313,13 @@ function Contact() {
                                 </div>
                                 <div className="contact-info-item">
                                     <span className="contact-icon">
-                                        <i className="bx bxl-whatsapp"></i>
+                                        <i className="bx bx-printer"></i>
                                     </span>
                                     <div>
                                         <p>
-                                            <strong>WhatsApp</strong>
+                                            <strong>Télécopie</strong>
                                         </p>
-                                        <p>+229 XX XX XX XX</p>
+                                        <p> +33(0)9 82 63 64 24</p>
                                     </div>
                                 </div>
                             </div>
@@ -367,8 +367,8 @@ function Contact() {
                                         <p>
                                             <strong>Siège France</strong>
                                         </p>
+                                        <p>71/73 Avenue Des Ternes 75017 </p>
                                         <p>Paris , France</p>
-                                        <p>Centre d'affaire</p>
                                     </div>
                                 </div>
                             </div>
