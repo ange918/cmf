@@ -158,10 +158,11 @@ function About() {
                                 fiable d'armateurs.
                             </p>
                             <p>
-                                Nous développons des projets en aquaculture
-                                multi-sites avec des collaborations
-                                scientifiques internationales, notamment avec
-                                l'Université de Montpellier, l'IRD et l'INRA.
+                                Nous développerons des projets en aquaculture
+                                multi-sites avec des potentiels scientifiques
+                                internationales, notamment avec l'Université de
+                                Montpellier, l'IRD et l'INRA sous réserve d'une
+                                collaboration
                             </p>
                             <p>
                                 Notre réseau politique, économique et
@@ -273,9 +274,10 @@ function About() {
                             <div className="team-info">
                                 <p className="role">Directeur technique</p>
                                 <p>
-                                    Directeur technique assurant supervision
-                                    aquacole, optimisant production, qualité,
-                                    durabilité et performance globale.
+                                    Directeur technique assurant la supervision,
+                                    l'optimisation, la production, la qualité,
+                                    la durabilité et la performance globale de
+                                    la pêche et de l'aquaculture de CFM
                                 </p>
                             </div>
                         </div>

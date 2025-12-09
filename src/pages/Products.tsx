@@ -61,7 +61,7 @@ const mainProducts = [
         image: 'bateau.jpg',
         title: 'Import & Export',
         description:
-            'Notre Direction France assure l\'import et l\'export des produits de mer frais, surgelés et conserves.',
+            "Notre Direction France assure l'import et l'export des produits de mer frais, surgelés et conserves.",
         link: '/import-export',
         iconType: 'import-export',
     },
@@ -134,7 +134,7 @@ function Products() {
                     <p className="section-subtitle">
                         Découvrez notre sélection de poissons, crustacés et
                         équipements issus d'une pêche responsable et d'une
-                        aquaculture durable.
+                        aquaculture durable au normes HCP
                     </p>
                     <div className="products-main-grid">
                         {mainProducts.map((product, index) => (

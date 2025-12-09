@@ -109,12 +109,12 @@ function Footer() {
                                 contact@comatra-fm.com
                             </li>
                             <li>
-                                <PhoneIcon className="heroicon" /> +33 x xx XX
-                                XX XX XX
+                                <PhoneIcon className="heroicon" /> + +33 6 03 18
+                                15 00
                             </li>
                             <li>
-                                <MapPinIcon className="heroicon" /> Paris ,
-                                France -Centre d'affaires
+                                <MapPinIcon className="heroicon" />
+                                71/73 Avenue Des Ternes 75017 Paris France
                             </li>
                         </ul>
                     </div>

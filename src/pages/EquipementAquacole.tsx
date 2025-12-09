@@ -1,5 +1,9 @@
 import { useEffect, useRef } from 'react'
-import { Cog6ToothIcon, CubeIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
+import {
+    Cog6ToothIcon,
+    CubeIcon,
+    EnvelopeIcon,
+} from '@heroicons/react/24/outline'
 
 const equipements = [
     {
@@ -60,13 +64,19 @@ const equipements = [
                 name: 'Bassins en béton',
                 image: 'bassin_en_beton.jpg',
                 description:
-                    'Bassins durables pour élevage terrestre, avec systèmes de drainage intégrés. Conception optimisée pour le contrôle de la qualité de l\'eau.',
+                    "Bassins durables pour élevage terrestre, avec systèmes de drainage intégrés. Conception optimisée pour le contrôle de la qualité de l'eau.",
             },
             {
                 name: 'Bassins géomembrane',
                 image: 'geomenbrane.jpg',
                 description:
                     'Solutions souples et économiques pour installations modulables. Étanchéité parfaite et adaptation à tous les terrains.',
+            },
+            {
+                name: 'Bassin à recirculation bio sécurisé .',
+                image: '/recirculation.jpg',
+                description:
+                    'Bassin fermé recyclant l’eau pour un élevage sain et sécurisé.',
             },
         ],
     },
@@ -90,6 +100,18 @@ const equipements = [
                 image: 'pompe.jpeg',
                 description:
                     'Équipements de filtration et recirculation pour systèmes RAS. Haute efficacité énergétique et faible maintenance.',
+            },
+            {
+                name: "Système de traitement d'eau en circuit fermé",
+                image: '/fermé.webp',
+                description:
+                    'Filtre et purifie l’eau pour une qualité optimale constante .',
+            },
+            {
+                name: 'Distributeur d&#39;aliment automatisé et manuel',
+                image: 'automatique.jpg',
+                description:
+                    'Distribue automatiquement ou manuellement l’aliment avec précision contrôlée.',
             },
         ],
     },
@@ -132,14 +154,15 @@ function EquipementAquacole() {
                 <div className="page-header-overlay"></div>
                 <div className="container hero-content">
                     <h1>
-                        <Cog6ToothIcon className="heroicon header-icon" /> Équipement Aquacole
+                        <Cog6ToothIcon className="heroicon header-icon" />{' '}
+                        Équipement Aquacole
                     </h1>
                     <p>Solutions professionnelles pour l'aquaculture moderne</p>
                 </div>
             </div>
 
             {equipements.map((section, sectionIndex) => {
-                const sectionItems = section.items.map((item) => {
+                const sectionItems = section.items.map(item => {
                     const currentIndex = globalIndex
                     globalIndex++
                     return { ...item, globalIndex: currentIndex }
@@ -157,7 +180,10 @@ function EquipementAquacole() {
                         }}>
                         <div className="container">
                             <h2 className="section-title">
-                                <CubeIcon className="heroicon section-title-icon" style={{ marginRight: '10px' }} />
+                                <CubeIcon
+                                    className="heroicon section-title-icon"
+                                    style={{ marginRight: '10px' }}
+                                />
                                 {section.category}
                             </h2>
 
@@ -165,9 +191,16 @@ function EquipementAquacole() {
                                 {sectionItems.map((item, index) => (
                                     <div
                                         key={index}
-                                        className={`alternating-product-card fade-in ${item.globalIndex % 2 === 1 ? 'reversed' : ''}`}>
+                                        className={`alternating-product-card fade-in ${
+                                            item.globalIndex % 2 === 1
+                                                ? 'reversed'
+                                                : ''
+                                        }`}>
                                         <div className="alternating-product-image">
-                                            <img src={item.image} alt={item.name} />
+                                            <img
+                                                src={item.image}
+                                                alt={item.name}
+                                            />
                                         </div>
                                         <div className="alternating-product-content">
                                             <h3>{item.name}</h3>

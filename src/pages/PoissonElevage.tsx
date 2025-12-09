@@ -132,13 +132,6 @@ const poissonsMarins = [
 
 const poissonsEauDouce = [
     {
-        name: 'Tilapia souche améliorée',
-        scientificName: 'oreochromis niloticus ',
-        image: 'tilapia.jpg',
-        description:
-            'Poisson nutritif, chair tendre et savoureuse, idéal recettes variées.',
-    },
-    {
         name: 'clarias',
         scientificName: 'nigrodigitatus',
         image: 'tilapia.jpg',
@@ -161,6 +154,37 @@ const poissonsEauDouce = [
     },
 ]
 
+const poissonsEauDouceEtDeMer = [
+    {
+        name: 'Tilapia souche améliorée',
+        scientificName: 'oreochromis niloticus ',
+        image: 'niloticus.jpg',
+        description:
+            'Poisson nutritif, chair tendre et savoureuse, idéal recettes variées.',
+    },
+    {
+        name: '  Tilapia souche améliorer',
+        scientificName: 'oreochromis mossambicus',
+        image: 'tilapia.jpg',
+        description:
+            'Poisson nutritif, chair tendre, goût délicieux, idéal recettes variées.',
+    },
+    {
+        name: '  Tilapia souche améliorer',
+        scientificName: 'oreochromis aureus',
+        image: 'aureus.webp',
+        description:
+            'Chair savoureuse et ferme, parfait pour cuisson grillée ou vapeur.',
+    },
+    {
+        name: '  Tilapia souche améliorer',
+        scientificName: 'scianenops occellarus',
+        image: 'saumon.jpg',
+        description:
+            'Poisson de qualité, chair douce et délicate, très apprécié gourmets.',
+    },
+]
+
 const crustacéeEauDeMer = [
     {
         name: 'crevettes à 5 pattes blanches',
@@ -178,7 +202,7 @@ const crustacéeEauDeMer = [
     },
     {
         name: 'crevette géante tigrée',
-        scientificName: 'penaeus mondon',
+        scientificName: 'penaeus mondone',
         image: 'crevette-géant.jpg',
         description:
             'Crevette de grande taille, chair ferme et savoureuse, parfaite pour restaurants et export.',
@@ -317,6 +341,48 @@ function PoissonsElevage() {
 
                     <div className="alternating-products">
                         {poissonsEauDouce.map((poisson, index) => (
+                            <div
+                                key={index}
+                                className={`alternating-product-card fade-in ${
+                                    index % 2 === 1 ? 'reversed' : ''
+                                }`}>
+                                <div className="alternating-product-image">
+                                    <img
+                                        src={poisson.image}
+                                        alt={poisson.name}
+                                    />
+                                </div>
+                                <div className="alternating-product-content">
+                                    <h3>{poisson.name}</h3>
+                                    <span className="scientific-name">
+                                        {poisson.scientificName}
+                                    </span>
+                                    <p>{poisson.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section
+                className="product-detail-section section"
+                style={{ background: 'var(--gray-light)' }}>
+                <div className="container">
+                    <h2 className="section-title">
+                        <DropletIcon
+                            className="heroicon section-title-icon"
+                            style={{ marginRight: '10px' }}
+                        />
+                        Poissons d'Eau Douce et de Mer
+                    </h2>
+                    <p className="section-subtitle">
+                        Nos poissons d'eau douce et de mer, issus de nos fermes
+                        aquacoles modernes et durables.
+                    </p>
+
+                    <div className="alternating-products">
+                        {poissonsEauDouceEtDeMer.map((poisson, index) => (
                             <div
                                 key={index}
                                 className={`alternating-product-card fade-in ${
