@@ -143,15 +143,13 @@ function CrustacesCoquillages() {
                         les plus stricts de qualité et de durabilité.
                     </p>
 
-                    <div className="alternating-products">
+                    <div className="poissons-marins-grid fade-in">
                         {crustacesMarins.map((item, index) => (
-                            <div
-                                key={index}
-                                className={`alternating-product-card fade-in ${index % 2 === 1 ? 'reversed' : ''}`}>
-                                <div className="alternating-product-image">
+                            <div key={index} className="poisson-card">
+                                <div className="poisson-image">
                                     <img src={item.image} alt={item.name} />
                                 </div>
-                                <div className="alternating-product-content">
+                                <div className="poisson-content">
                                     <h3>{item.name}</h3>
                                     <span className="scientific-name">{item.scientificName}</span>
                                     <p>{item.description}</p>
@@ -174,15 +172,13 @@ function CrustacesCoquillages() {
                         Nos crustacés d'eau douce, élevés dans nos bassins modernes pour une qualité optimale.
                     </p>
 
-                    <div className="alternating-products">
+                    <div className="poissons-marins-grid fade-in">
                         {crustacesEauDouce.map((item, index) => (
-                            <div
-                                key={index}
-                                className={`alternating-product-card fade-in ${index % 2 === 1 ? 'reversed' : ''}`}>
-                                <div className="alternating-product-image">
+                            <div key={index} className="poisson-card">
+                                <div className="poisson-image">
                                     <img src={item.image} alt={item.name} />
                                 </div>
-                                <div className="alternating-product-content">
+                                <div className="poisson-content">
                                     <h3>{item.name}</h3>
                                     <span className="scientific-name">{item.scientificName}</span>
                                     <p>{item.description}</p>
