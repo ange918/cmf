@@ -276,20 +276,16 @@ function PoissonsElevage() {
                         contrôlé pour garantir une qualité exceptionnelle.
                     </p>
 
-                    <div className="alternating-products">
+                    <div className="poissons-marins-grid fade-in">
                         {poissonsMarins.map((poisson, index) => (
-                            <div
-                                key={index}
-                                className={`alternating-product-card fade-in ${
-                                    index % 2 === 1 ? 'reversed' : ''
-                                }`}>
-                                <div className="alternating-product-image">
+                            <div key={index} className="poisson-card">
+                                <div className="poisson-image">
                                     <img
                                         src={poisson.image}
                                         alt={poisson.name}
                                     />
                                 </div>
-                                <div className="alternating-product-content">
+                                <div className="poisson-content">
                                     <h3>{poisson.name}</h3>
                                     <span className="scientific-name">
                                         {poisson.scientificName}
@@ -318,20 +314,16 @@ function PoissonsElevage() {
                         modernes et durables.
                     </p>
 
-                    <div className="alternating-products">
+                    <div className="poissons-marins-grid fade-in">
                         {poissonsEauDouce.map((poisson, index) => (
-                            <div
-                                key={index}
-                                className={`alternating-product-card fade-in ${
-                                    index % 2 === 1 ? 'reversed' : ''
-                                }`}>
-                                <div className="alternating-product-image">
+                            <div key={index} className="poisson-card">
+                                <div className="poisson-image">
                                     <img
                                         src={poisson.image}
                                         alt={poisson.name}
                                     />
                                 </div>
-                                <div className="alternating-product-content">
+                                <div className="poisson-content">
                                     <h3>{poisson.name}</h3>
                                     <span className="scientific-name">
                                         {poisson.scientificName}
@@ -360,20 +352,16 @@ function PoissonsElevage() {
                         aquacoles modernes et durables.
                     </p>
 
-                    <div className="alternating-products">
+                    <div className="poissons-marins-grid fade-in">
                         {poissonsEauDouceEtDeMer.map((poisson, index) => (
-                            <div
-                                key={index}
-                                className={`alternating-product-card fade-in ${
-                                    index % 2 === 1 ? 'reversed' : ''
-                                }`}>
-                                <div className="alternating-product-image">
+                            <div key={index} className="poisson-card">
+                                <div className="poisson-image">
                                     <img
                                         src={poisson.image}
                                         alt={poisson.name}
                                     />
                                 </div>
-                                <div className="alternating-product-content">
+                                <div className="poisson-content">
                                     <h3>{poisson.name}</h3>
                                     <span className="scientific-name">
                                         {poisson.scientificName}
@@ -400,20 +388,16 @@ function PoissonsElevage() {
                         contrôlé pour garantir une qualité exceptionnelle.
                     </p>
 
-                    <div className="alternating-products">
+                    <div className="poissons-marins-grid fade-in">
                         {crustacéeEauDeMer.map((crustace, index) => (
-                            <div
-                                key={index}
-                                className={`alternating-product-card fade-in ${
-                                    index % 2 === 1 ? 'reversed' : ''
-                                }`}>
-                                <div className="alternating-product-image">
+                            <div key={index} className="poisson-card">
+                                <div className="poisson-image">
                                     <img
                                         src={crustace.image}
                                         alt={crustace.name}
                                     />
                                 </div>
-                                <div className="alternating-product-content">
+                                <div className="poisson-content">
                                     <h3>{crustace.name}</h3>
                                     <span className="scientific-name">
                                         {crustace.scientificName}
@@ -442,20 +426,16 @@ function PoissonsElevage() {
                         aquacoles modernes et durables.
                     </p>
 
-                    <div className="alternating-products">
+                    <div className="poissons-marins-grid fade-in">
                         {crustacéeEauDouce.map((crustace, index) => (
-                            <div
-                                key={index}
-                                className={`alternating-product-card fade-in ${
-                                    index % 2 === 1 ? 'reversed' : ''
-                                }`}>
-                                <div className="alternating-product-image">
+                            <div key={index} className="poisson-card">
+                                <div className="poisson-image">
                                     <img
                                         src={crustace.image}
                                         alt={crustace.name}
                                     />
                                 </div>
-                                <div className="alternating-product-content">
+                                <div className="poisson-content">
                                     <h3>{crustace.name}</h3>
                                     <span className="scientific-name">
                                         {crustace.scientificName}
